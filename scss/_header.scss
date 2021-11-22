@@ -1,0 +1,86 @@
+/* CABECERA */
+
+.logotipo {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    img {
+        margin: 0px auto;
+        width: 23rem;
+    }
+    p {
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        margin-top: 1rem;
+        text-shadow: 0px 2px 1px $color-gris-oscuro;
+        transition: all 300ms;
+        padding-bottom: 2rem;
+        text-align: center;
+        a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: $color-verde;
+        }
+    }
+    h1:hover {
+        text-shadow: 0px 2px 1px $color-gris-oscuro, 0px 0px 4px $color-verde;
+    }
+}
+
+.tarjetaCabecera {
+    width: 30rem;
+    h2 {
+        padding-bottom: 2rem;
+        color: $color-gris-oscuro;
+    }
+    p {
+        color: $color-gris-claro;
+    }
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+.navegador {
+    background-color: $color-gris-oscuro;
+    color: $color-blanco;
+    height: 7rem;
+    box-shadow: 0px 0px 2px gray;
+    margin-bottom: 1.5rem;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav {
+    align-items: center;
+    transition: all 300ms;
+    font-size: 1.6rem;
+    a {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 15rem;
+        color: $color-blanco!important;
+        text-align: center;
+    }
+    a:hover {
+        background-color: $color-verde;
+        box-shadow: 0px 0px 4px green inset;
+    }
+}
+
+.nav-link {
+    color: white;
+    height: 100%;
+    padding-top: 0.7rem;
+}
+
+.navbarCentrado {
+    justify-content: center;
+}
+
+.activo {
+    background-color: #63B945; 
+    box-shadow: 0px 0px 4px green inset;
+}

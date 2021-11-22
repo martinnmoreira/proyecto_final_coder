@@ -1,0 +1,461 @@
+/*VISTA MOVIL */
+
+/*VISTA MOVIL CUERPO INDEX*/
+
+@media only screen and (max-width:576px) {
+
+    .container {
+        padding: 3px!important;
+    }
+
+    .tarjetaCabecera {
+        margin: auto;
+        text-align: center;
+    }
+
+    .imagenMensaje {
+        width: 25rem;
+        height: 3.8rem;
+    }
+
+    .contenedor {
+        p {
+            font-size: 1.2rem;
+        }
+        a {
+            p {
+            font-size: 1rem;
+            }
+        }
+    }
+
+    .tarjeta {
+        width: 25rem;
+        img {
+            width: 20rem;
+            height: auto;
+        }
+        a {
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .gridTarjetas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "imagenUno"
+            "ImagenDos"
+            "imagenTres"
+        ;
+        grid-row-gap: 10px;
+        padding-top: 2rem;
+        width: auto;
+        justify-items: center;
+        }
+        
+        .imagenUno {
+            grid-area: imagenUno;
+        }
+        
+        .imagenDos {
+            grid-area: imagenDos;
+        }
+        
+        .imagenTres {
+            grid-area: imagenTres;
+        }
+
+    /* VISTA MOVIL PAGINA LA ESCUELA */
+
+    .contenedorUbicacion {
+        height: auto;
+        width: auto;
+    }
+
+    .panelDescripcionFlex {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    
+    .ubicacionDescripcion {
+        width: 90%;
+        padding: auto;
+    }
+
+    .ubicacionMapa {
+        width: 28rem;
+        height: 24rem;
+        text-align: center;
+        margin: 1rem;
+        .mapa {
+            width: 28rem;
+            height: 24rem;
+            border: 1px solid #666666;
+        }
+    }
+
+    .institucionalCard {
+        width: 90%;
+    }
+    .contenedorEscuela {
+        width: auto;
+        height: auto;
+    }
+    
+    .panelHeading {
+        h2 {
+        font-size: 1.6rem;
+        padding: auto;
+        }
+    }
+
+    .panelDescripcion {
+        font-size: 1.6rem;
+        padding: auto;
+    }
+
+    .contenedorInstitucional {
+        width: auto;
+        height: auto;
+    }
+
+    .tarjetasInstitucional {
+        display: flex;
+        flex-flow: column nowrap;
+        width: auto;
+    }
+
+    .cardFlexIntstitucionalTamano {
+        width: auto;
+        height: auto;
+    }
+
+    /* VISTA MOVIL HTML GALERIA */
+
+    .contenedorGaleria {
+        text-align: center;
+    }
+
+    .imagenGaleria {
+        width: 22rem;
+        height: 17rem;
+        margin: 1rem;
+    }
+
+    .imagenGaleria:hover {
+        filter: grayscale(100%);
+        z-index: 5;
+    }
+
+    .gridPadreGaleria {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "imagenUno"
+            "imagenDos"
+            "imagenTres"
+            "imagenCuatro"
+            "imagenCinco"
+            "imagenSeis"
+            "imagenSiete"
+            "imagenOcho"
+            "imagenNueve"
+            "imagenDiez"
+            "imagenOnce"
+            "imagenDoce"
+        ;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .imagenUno {
+        grid-area: imagenUno;
+    }
+
+    .imagenDos {
+        grid-area: imagenDos;
+    }
+
+    .imagenTres {
+        grid-area: imagenTres;
+    }
+
+    .imagenCuatro {
+        grid-area: imagenCuatro;
+    }
+
+    .imagenCinco {
+        grid-area: imagenCinco;
+    }
+
+    .imagenSeis {
+        grid-area: imagenSeis;
+    }
+
+    .imagenSiete {
+        grid-area: imagenSiete;
+    }
+
+    .imagenOcho {
+        grid-area: imagenOcho;
+    }
+
+    .imagenNueve {
+        grid-area: imagenNueve;
+    }
+
+    .imagenDiez {
+        grid-area: imagenDiez;
+    }
+
+    .imagenOnce {
+        grid-area: imagenOnce;
+    }
+
+    .imagenDoce {
+        grid-area: imagenDoce;
+    }
+
+    /* VISTA MOVIL HTML INSTALACIONES */
+
+    .listadoInstalaciones {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 1rem;
+        width: 28rem;
+        height: auto;
+        ol {
+            width: auto;
+        }
+    }
+
+
+    /* VISTA MOVIL FORMULARIO CONTACTO */
+
+    .contactForm{  
+        width: 35rem; 
+        height: auto;
+        margin: 1.5rem auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .contactForm {
+        form {
+            input {
+                width: 31rem; 
+                height: 4rem; 
+            }
+            select { 
+                width: 31rem; 
+            }
+            textarea{
+                width: 31rem;
+            }
+            button {
+                width: 30rem;
+            }
+        }
+    }
+
+    .formulario {
+        h2 {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        h3{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+
+    /* VISTA MOVIL FOOTER CON BOOTSTRAP */
+
+    .marginTarjetasMovil {
+        margin-top: 3rem;
+        text-align: center;
+        padding: 0px;
+    }
+
+}
+
+/* VISTA TABLET */
+@media only screen and (min-width:577px) and (max-width:900px) {
+
+    .container {
+        padding: 3px!important;
+    }
+
+
+    .tarjetaCabecera {
+        margin: auto;
+        text-align: center;
+    }
+    
+    .imagenMensaje {
+        width: 31rem;
+        height: 5.3rem;
+    }
+
+    .contenedor {
+        a {
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .tarjeta {
+        width: auto;
+        img {
+            width: 20rem;
+            height: auto;
+        }
+        a {
+            p {
+            font-size: 1.6rem;
+            }
+        }
+    }
+
+    .ubicacionDescripcion {
+        width: 100%;
+    }
+
+    .gridTarjetas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "imagenUno imagenDos"
+            "imagenTres none"
+        ;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        padding-top: 4rem;
+        }
+        
+        .imagenUno {
+            grid-area: imagenUno;
+        }
+        
+        .imagenDos {
+            grid-area: imagenDos;
+        }
+        
+        .imagenTres {
+            grid-area: imagenTres;
+        }
+
+/* VISTA TABLET HTML ESCUELA */
+
+    .contenedorUbicacion {
+        height: auto;
+    }
+
+    .panelDescripcionFlex {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mapa {
+        width: 30rem;
+        height: 25rem;
+    }
+
+
+/* VISTA TABLET HTML GALERIA */
+
+    .gridPadreGaleria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "imagenUno imagenDos"
+            "imagenTres imagenCuatro"
+            "imagenCinco imagenSeis"
+            "imagenSiete imagenOcho"
+            "imagenNueve imagenDiez"
+            "imagenOnce imagenDoce"
+        ;
+        justify-items: center;
+    }
+
+    .imagenUno {
+        grid-area: imagenUno;
+    }
+
+    .imagenDos {
+        grid-area: imagenDos;
+    }
+
+    .imagenTres {
+        grid-area: imagenTres;
+    }
+
+    .imagenCuatro {
+        grid-area: imagenCuatro;
+    }
+
+    .imagenCinco {
+        grid-area: imagenCinco;
+    }
+
+    .imagenSeis {
+        grid-area: imagenSeis;
+    }
+
+    .imagenSiete {
+        grid-area: imagenSiete;
+    }
+
+    .imagenOcho {
+        grid-area: imagenOcho;
+    }
+
+    .imagenNueve {
+        grid-area: imagenNueve;
+    }
+
+    .imagenDiez {
+        grid-area: imagenDiez;
+    }
+
+    .imagenOnce {
+        grid-area: imagenOnce;
+    }
+
+    .imagenDoce {
+        grid-area: imagenDoce;
+    }
+
+/* VISTA TABLET HTML INSTALACIONES */
+
+    .listadoInstalaciones {
+        margin-right: auto;
+        margin-left: auto;
+        width: 45rem;
+        height: auto;
+        ol {
+            width: auto;
+        }
+    }
+
+    /* VISTA MOVIL FOOTER CON BOOTSTRAP */
+
+    .marginTarjetasMovil {
+        margin-top: 3rem;
+        text-align: center;
+        padding: 0px;
+    }
+
+}

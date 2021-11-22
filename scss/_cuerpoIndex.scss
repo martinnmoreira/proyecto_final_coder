@@ -1,0 +1,59 @@
+/* SECCION TARJETAS INDEX */
+
+.contenedor {
+    text-align: center;
+    padding: 30px;
+    border: solid 1px #99A799;
+    background-image: url("../img/fondo_papel.png");
+    margin-top: 2rem;
+    img {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: $color-gris-claro;
+        font-weight: bold;
+    }
+}
+
+.imagenGaleria {
+    width: 25rem;
+    height: 18rem;
+}
+
+/* GRID TARJETAS */
+
+.gridTarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "imagenUno imagenDos imagenTres"
+    ;
+    grid-column-gap: 10px;
+    padding-top: 4rem;
+    p {
+        color: $color-blanco;
+        padding-top: 1rem;
+    }
+}
+
+.imagenUno {
+    grid-area: imagenUno;
+}
+
+.imagenDos {
+    grid-area: imagenDos;
+}
+
+.imagenTres {
+    grid-area: imagenTres;
+}
+
+.tarjeta {
+    border: 2px solid $color-blanco;
+    border-radius: 1rem;
+    width: auto;
+}

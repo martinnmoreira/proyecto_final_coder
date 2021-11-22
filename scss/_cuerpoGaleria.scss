@@ -1,0 +1,88 @@
+/*SECCION GALERIA */
+
+.contenedorGaleria {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid 1px #99A799;
+    border-radius: 4px;
+    width: auto;
+    h2 {
+        font-size: 1.8rem;
+        color: $color-gris-claro;
+        margin-bottom: 25px;
+    }
+}
+
+.imagenGaleria {
+    width: 25rem;
+    height: 22rem;
+    margin: 10px;
+    opacity: 0.7;
+}
+
+.imagenGaleria:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 5;
+}
+
+.gridPadreGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "imagenUno imagenDos imagenTres imagenCuatro"
+        "imagenCinco imagenSeis imagenSiete imagenOcho"
+        "imagenNueve imagenDiez imagenOnce imagenDoce"
+    ;
+    justify-items: center;
+}
+
+.imagenUno {
+    grid-area: imagenUno;
+}
+
+.imagenDos {
+    grid-area: imagenDos;
+}
+
+.imagenTres {
+    grid-area: imagenTres;
+}
+
+.imagenCuatro {
+    grid-area: imagenCuatro;
+}
+
+.imagenCinco {
+    grid-area: imagenCinco;
+}
+
+.imagenSeis {
+    grid-area: imagenSeis;
+}
+
+.imagenSiete {
+    grid-area: imagenSiete;
+}
+
+.imagenOcho {
+    grid-area: imagenOcho;
+}
+
+.imagenNueve {
+    grid-area: imagenNueve;
+}
+
+.imagenDiez {
+    grid-area: imagenDiez;
+}
+
+.imagenOnce {
+    grid-area: imagenOnce;
+}
+
+.imagenDoce {
+    grid-area: imagenDoce;
+}

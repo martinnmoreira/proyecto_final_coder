@@ -1,0 +1,141 @@
+/* ESTILOS DE HTML LA ESCUELA */
+
+.contenedorArticulos {
+    width: 90%;
+    height: auto;
+    border: 1px solid grey;
+    margin: 1rem;
+    background-color: $color-blanco;
+}
+
+.panelHeading {
+    color: $color-gris-oscuro;
+    background-color: $color-verde;
+    height: 4rem;
+    padding-top: 1rem;
+    h2 {
+        font-size: 1.8rem;
+        color: $color-blanco;
+        margin-left: 10px;
+    }
+}
+
+.gridContenedorEscuela {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "contenedorEscuela"
+        "contenedorUbicacion"
+        "contenedorInstitucional"
+        "contenedorMaterias"
+    ;
+    grid-column-gap: 10px;
+    margin-top: 1rem;
+    justify-items: center;
+}
+
+.contenedorEscuela {
+    grid-area: contenedorEscuela;
+}
+
+.contenedorUbicacion {
+    grid-area: contenedorUbicacion;
+}
+
+.contenedorInstituacional {
+    grid-area: contenedorInstitucional;
+}
+
+.contenedorMaterias {
+    grid-area: contenedorMaterias;
+}
+
+.contenedorMaterias{
+    height: auto;
+}
+
+.panelDescripcion {
+    padding: 1rem;
+    color: $color-gris-oscuro;
+    p {
+        padding: 1.4rem;
+    }
+    ul {
+        list-style: none;
+        li {
+            padding: 1.4rem;
+            font-size: 1.4rem;
+        }
+    } 
+}
+
+.panelDescripcionFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ubicacionDescripcion {
+    width: 50%;
+    p {
+        padding: 1rem;
+        font-size: 1.4rem;
+        color: #333333;
+    }
+} 
+
+.ubicacionMapa {
+    width: 50%;
+    text-align: center;
+    margin: 1rem;
+    .mapa {
+        width: 35rem;
+        height: 30rem;
+        border: 1px solid $color-gris-claro;
+        
+    }
+}
+
+.botonGenerico {
+    display: block;
+    width: 15rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: $color-verde;
+    color: $color-blanco;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.cardFlexIntstitucional {
+    flex-grow: 1;
+    border: 1px solid $color_gris_claro;
+    padding: 1.4rem;
+    margin: 1rem;
+    width: 30rem;
+    height: auto;
+    h3 {
+        font-size: 1.8rem;
+        color: $color_gris_oscuro;
+    }
+    p {
+        font-size: 1.4rem;
+        color: $color_gris_claro;
+        padding-top: 1.4rem;
+    }
+}
+
+.cardFlexIntstitucionalTamano {
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    justify-content: space-between;
+}
+
+.tarjetasInstitucional {
+    display: flex;
+    flex-flow: row nowrap;
+}

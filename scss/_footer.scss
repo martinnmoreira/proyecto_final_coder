@@ -1,0 +1,50 @@
+/* FOOTER */
+
+.transicion:hover {
+    transition: 2s;
+    font-size: 2rem;
+}
+
+/* CSS FOOTER CON BOOTSTRAP */
+
+.bgGrey {
+    background-color: $color-gris-oscuro;
+}
+
+.bgGreen {
+    background-color: $color-verde;
+}
+
+.clBlanco {
+    color: $color-blanco!important;
+}
+
+.linksFooter {
+    list-style: none;
+    padding-left: 0;
+}
+
+.linksFooter a:hover {
+    color: $color-verde;
+}
+
+.btn {
+    border-color: $color-blanco;
+    a {
+        text-decoration: none;
+        color: $color-blanco;
+    }
+}
+
+.redesFooter {
+    color: $color-blanco;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.marginTarjetasMovil {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0px;
+}

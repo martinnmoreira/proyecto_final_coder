@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
+    <meta name="keywords"  content="ESCUELA, ESPECIAL, DISCAPACIDAD, CAPACIDADES, DIFERENTES, EDUCACIÓN, NIÑOS">
+    <meta name="copy" content="Maitén">
+    <meta name="author" content="Martin Nicolas Moreira">
+    <meta property="og:title" content="Maitén">
+    <meta property="og:description" content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
+    <meta property="og:image" content="../img/logo.png">
+    <meta property="og:locale" content="es_ES">
+    <title>Maitén | Contacto</title>
+    <title>Maitén</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/logo.png" />
+    <!-- Fin Favicon -->
+    <!-- Rel Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <!-- Fin rel Bootstrap -->
+    <!-- Rel CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <!-- Fin rel CSS -->
+</head>
+
+<body>
+    <!-- Inicio de la cabecera -->
+    <header>
+        <div class="container">
+            <div class="row w-100 d-flex justify-content-around align-items-baseline">
+                <div class="col-12 col-lg-3">
+                    <div class="logotipo tarjetaCabecera">
+                        <a href="../index.html"><img src="../img/logo.png" alt="logotivo de la web"></a>
+                        <p>
+                            <a href="../index.html">Amor, respeto y confianza</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="tarjetaCabecera">
+                        <h2>Autorizado por la DGEGP</h2>
+                        <p>Dirección General de Educación de Gestión Privada</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="tarjetaCabecera">
+                        <h2>Nivel Primario y Prelaboral</h2>
+                        <p>Incorporado a la enseñanza oficial A-1227</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Fin de la cabecera -->
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navegador">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbarCentrado" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link transicion" href="../index.html">Inicio</a>
+                    <a class="nav-link transicion" href="laescuela.html">La Escuela</a>
+                    <a class="nav-link transicion" href="servicios.html">Servicios</a>
+                    <a class="nav-link transicion" href="instalaciones.html">Instalaciones</a>
+                    <a class="nav-link transicion" href="galeria.html">Galería</a>
+                    <a class="nav-link transicion activo" href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin del Menú de navegación -->
+
+    <!-- Inicio de Sección central -->
+    <section>
+        <!-- Inicio del formulario de contacto -->
+        <div class="contactForm">
+            <div class="formulario">
+                <h1>Contacto</h1>
+                <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+                <form action="submeter-formulario.php" method="post">
+                    <div>
+                        <label for="nombre" class="colocar_nombre">Nombre/s<span class="obligatorio">*</span></label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                            placeholder="Escribe tu nombre/s">
+                    </div>
+                    <div>
+                        <label for="apellido" class="colocar_apellido">Apellido/s<span
+                                class="obligatorio">*</span></label>
+                        <input type="text" name="introducir_apellido" id="apellido" required="obligatorio"
+                            placeholder="Escribe tu Apellido/s">
+                    </div>
+                    <div>
+                        <label for="email" class="colocar_email">Email<span class="obligatorio">*</span></label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio"
+                            placeholder="Escribe tu Email">
+                    </div>
+                    <div>
+                        <label for="telefone" class="colocar_telefono">Teléfono</label>
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                    </div>
+                    <div>
+                        <label for="asunto" class="colocar_asunto">Asunto<span class="obligatorio">*</span></label>
+                        <select name="introducir_asunto">
+                            <option value="starter" hidden>Seleccione un motivo...</option>
+                            <option value="incripcion">Inscripción de alumno nuevo</option>
+                            <option value="arancel">Aranceles</option>
+                            <option value="horario">Horarios</option>
+                            <option value="acerca">Acerca de la educaión</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje<span class="obligatorio">*</span></label>
+                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+                            placeholder="Deja aquí tu comentario..."></textarea>
+                    </div>
+                    <button type="submit" name="enviar_formulario" id="enviar">Enviar</button>
+                    <div class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Fin de formulario de contacto -->
+    </section>
+
+    <!-- Fin de Sección central -->
+
+    <!-- Inicio del footer -->
+    <footer class="container-fluid bgGrey clBlanco">
+        <div class="container py-5">
+            <div class="row w-100 d-flex justify-content-around">
+                <div class="col-12 col-lg-3 marginTarjetasMovil">
+                    <h2 class="redesFooter">Contacto</h2>
+                    <p>Tel. (54-11) 4768-4793/4470</p>
+                    <p>administracion@maiten.edu.ar</p>
+                    <p>La Paz 3145 (ex 247), Villa Ballester. Buenos Aires.</p>
+                    <button type="button" class="btn btn-primary btn-lg bgGreen"><a
+                            href="contacto.html">Escribinos</a></button>
+                </div>
+                <div class="col-12 col-lg-3 marginTarjetasMovil">
+                    <ul class="linksFooter">
+                        <h2 class="redesFooter">Info</h2>
+                        <li><a href="../index.html" class="clBlanco transicion">Inicio</a></li>
+                        <li><a href="laescuela.html" class="clBlanco transicion">La Escuela</a></li>
+                        <li><a href="servicios.html" class="clBlanco transicion">Servicios</a></li>
+                        <li><a href="instalaciones.html" class="clBlanco transicion">Instalaciones</a></li>
+                        <li><a href="galeria.html" class="clBlanco transicion">Galería</a></li>
+                        <li><a href="contacto.html" class="clBlanco transicion">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 marginTarjetasMovil">
+                    <h2 class="redesFooter">Nuestras redes</h2>
+                    <a href="https://facebook.com" target="blank"><i
+                            class="fab fa-facebook transicion redesFooter"></i></a>
+                    <a href=" https://www.instagram.com" target="blank"><i
+                            class="fab fa-instagram transicion redesFooter"></i></a>
+                    <a href="https://twitter.com" target="blank"><i
+                            class="fab fa-twitter transicion redesFooter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin del footer -->
+    <script src="https://kit.fontawesome.com/04fa2974e4.js" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.js"></script>
+</body>
+
+</html>
