@@ -1,0 +1,24 @@
+@mixin creartarjetasDivisorias ($colorTexto, $altura, $colorFondo) {
+    color: $colorTexto;
+    height: $altura;
+    background-color: $colorFondo;
+}
+
+.tarjetasDivisoriasCelestes {
+    @include creartarjetasDivisorias($color-blanco, 12rem, $color-celeste);
+
+}
+
+.tarjetasDivisoriasCelestesExt {
+    @extend .tarjetasDivisoriasCelestes;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    p {
+        text-align: center;
+        font-size: 2.2rem;
+        margin: 1.5rem;
+    }
+}

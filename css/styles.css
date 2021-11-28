@@ -20,7 +20,7 @@ h1 {
   text-align: center; }
 
 p, li {
-  font-size: 1.4rem; }
+  font-size: 1.6rem; }
 
 a {
   text-decoration: none; }
@@ -93,6 +93,14 @@ a {
   background-color: #63B945;
   box-shadow: 0px 0px 4px green inset; }
 
+.hamburguerCenter {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Propiedades Carousel */
+.carouselHeight {
+  height: 44.3rem; }
+
 /* SECCION TARJETAS INDEX */
 .contenedor {
   text-align: center;
@@ -112,6 +120,65 @@ a {
 .imagenGaleria {
   width: 25rem;
   height: 18rem; }
+
+.gridIndexServicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "serviciosInclusion serviciosPrimario serviciosCfi";
+  margin-top: 2rem;
+  justify-content: center; }
+
+.serviciosInclusion {
+  grid-area: serviciosInclusion; }
+  .serviciosInclusion a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #63B945;
+    width: 100%;
+    height: 30rem; }
+    .serviciosInclusion a img {
+      width: 12rem;
+      align-self: center; }
+    .serviciosInclusion a p {
+      color: #fbfbfb;
+      text-align: center; }
+
+.serviciosPrimario {
+  grid-area: serviciosPrimario; }
+  .serviciosPrimario a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #3EB5C9;
+    width: 100%;
+    height: 30rem; }
+    .serviciosPrimario a img {
+      width: 12rem;
+      align-self: center; }
+    .serviciosPrimario a p {
+      color: #fbfbfb;
+      text-align: center; }
+
+.serviciosCfi {
+  grid-area: serviciosCfi; }
+  .serviciosCfi a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #FF8800;
+    width: 100%;
+    height: 30rem; }
+    .serviciosCfi a img {
+      width: 12rem;
+      align-self: center; }
+    .serviciosCfi a p {
+      color: #fbfbfb;
+      text-align: center; }
 
 /* GRID TARJETAS */
 .gridTarjetas {
@@ -136,7 +203,6 @@ a {
 
 .tarjeta {
   border: 2px solid #fbfbfb;
-  border-radius: 1rem;
   width: auto; }
 
 /* ESTILOS DE HTML LA ESCUELA */
@@ -148,14 +214,19 @@ a {
   background-color: #fbfbfb; }
 
 .panelHeading {
-  color: #333333;
-  background-color: #63B945;
   height: 4rem;
-  padding-top: 1rem; }
-  .panelHeading h2 {
-    font-size: 1.8rem;
-    color: #fbfbfb;
-    margin-left: 10px; }
+  padding-top: 1rem;
+  font-size: 1.8rem;
+  color: #fbfbfb; }
+
+.fondoVerde {
+  background-color: #63B945; }
+
+.fondoCeleste {
+  background-color: #3EB5C9; }
+
+.fondoNaranja {
+  background-color: #FF8800; }
 
 .gridContenedorEscuela {
   display: grid;
@@ -343,6 +414,54 @@ a {
 #boton3 {
   background-color: blue; }
 
+.tarjetasDivisoriasVerdes, .tarjetasDivisoriasVerdesExt {
+  color: #fbfbfb;
+  height: 12rem;
+  background-color: #63B945; }
+
+.tarjetasDivisoriasVerdesExt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto; }
+  .tarjetasDivisoriasVerdesExt p {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 1.5rem; }
+
+.tarjetasDivisoriasNaranjas, .tarjetasDivisoriasNaranjasExt {
+  color: #fbfbfb;
+  height: 12rem;
+  background-color: #FF8800; }
+
+.tarjetasDivisoriasNaranjasExt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto; }
+  .tarjetasDivisoriasNaranjasExt p {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 1.5rem; }
+
+.tarjetasDivisoriasCelestes, .tarjetasDivisoriasCelestesExt {
+  color: #fbfbfb;
+  height: 12rem;
+  background-color: #3EB5C9; }
+
+.tarjetasDivisoriasCelestesExt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto; }
+  .tarjetasDivisoriasCelestesExt p {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 1.5rem; }
+
 /*SECCION GALERIA */
 .contenedorGaleria {
   text-align: center;
@@ -508,12 +627,6 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   color: #333333; }
 
-::-webkit-input-placeholder {
-  color: #a8a8a8; }
-
-::-webkit-textarea-placeholder {
-  color: #a8a8a8; }
-
 .formulario input:focus {
   outline: 0;
   border: 1px solid #97d848; }
@@ -564,6 +677,60 @@ a {
 /*VISTA MOVIL */
 /*VISTA MOVIL CUERPO INDEX*/
 @media only screen and (max-width: 576px) {
+  .gridIndexServicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "serviciosInclusion"  "serviciosPrimario"  "serviciosCfi";
+    margin-top: 2rem;
+    justify-content: center;
+    justify-items: center; }
+  .serviciosInclusion {
+    grid-area: serviciosInclusion;
+    width: 28rem; }
+    .serviciosInclusion a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #63B945;
+      height: 30rem; }
+      .serviciosInclusion a img {
+        width: 12rem;
+        align-self: center; }
+      .serviciosInclusion a p {
+        color: #fbfbfb;
+        text-align: center; }
+  .serviciosPrimario {
+    grid-area: serviciosPrimario;
+    width: 28rem; }
+    .serviciosPrimario a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #3EB5C9;
+      height: 30rem; }
+      .serviciosPrimario a img {
+        width: 12rem;
+        align-self: center; }
+      .serviciosPrimario a p {
+        color: #fbfbfb;
+        text-align: center; }
+  .serviciosCfi {
+    grid-area: serviciosCfi;
+    width: 28rem;
+    align-self: center; }
+    .serviciosCfi a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #FF8800;
+      height: 30rem; }
+      .serviciosCfi a img {
+        width: 12rem;
+        align-self: center; }
+      .serviciosCfi a p {
+        color: #fbfbfb;
+        text-align: center; }
   .container {
     padding: 3px !important; }
   .tarjetaCabecera {
@@ -598,6 +765,8 @@ a {
     grid-area: imagenDos; }
   .imagenTres {
     grid-area: imagenTres; }
+  .carouselHeight {
+    height: 15rem; }
   /* VISTA MOVIL PAGINA LA ESCUELA */
   .contenedorUbicacion {
     height: auto;
@@ -727,6 +896,8 @@ a {
   .imagenMensaje {
     width: 31rem;
     height: 5.3rem; }
+  .carouselHeight {
+    height: 34rem; }
   .contenedor a p {
     font-size: 1.6rem; }
   .tarjeta {

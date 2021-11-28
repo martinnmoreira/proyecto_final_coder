@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
-    <meta name="keywords"  content="ESCUELA, ESPECIAL, DISCAPACIDAD, CAPACIDADES, DIFERENTES, EDUCACIÓN, NIÑOS">
+    <meta name="description"
+        content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
+    <meta name="keywords" content="ESCUELA, ESPECIAL, DISCAPACIDAD, CAPACIDADES, DIFERENTES, EDUCACIÓN, NIÑOS">
     <meta name="copy" content="Maitén">
     <meta name="author" content="Martin Nicolas Moreira">
     <meta property="og:title" content="Maitén">
-    <meta property="og:description" content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
+    <meta property="og:description"
+        content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
     <meta property="og:image" content="img/logo.png">
     <meta property="og:locale" content="es_ES">
     <title>Maitén | Escuela especial</title>
@@ -52,25 +54,31 @@
                 </div>
             </div>
         </div>
-        
+
     </header>
     <!-- Fin de la cabecera -->
     <!-- Menú de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top navegador">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler hamburguerCenter" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse navbarCentrado" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link transicion activo" href="index.html">Inicio</a>
-                    <a class="nav-link transicion" href="pages/laescuela.html">La Escuela</a>
-                    <a class="nav-link transicion" href="pages/servicios.html">Servicios</a>
-                    <a class="nav-link transicion" href="pages/instalaciones.html">Instalaciones</a>
-                    <a class="nav-link transicion" href="pages/galeria.html">Galería</a>
-                    <a class="nav-link transicion" href="pages/contacto.html">Contacto</a>
+                    <a class="nav-link activo" href="index.html">Inicio</a>
+                    <a class="nav-link" href="pages/laescuela.html">La Escuela</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu navegador" aria-labelledby="navbarDropdown" style="margin: 0; border-radius: 0; padding: 0;">
+                            <li><a class="dropdown-item nav-link" href="pages/inclusion.html">Inclusión</a></li>
+                            <li><a class="dropdown-item nav-link" href="pages/primaria.html">Primario</a></li>
+                            <li><a class="dropdown-item nav-link" href="pages/cfi.html">CFI</a></li>
+                        </ul>
+                    </div>
+                    <a class="nav-link" href="pages/instalaciones.html">Instalaciones</a>
+                    <a class="nav-link" href="pages/galeria.html">Galería</a>
+                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
                 </div>
             </div>
         </div>
@@ -90,7 +98,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
                     aria-label="Slide 4"></button>
             </div>
-            <div class="carousel-inner">
+            <div class="carousel-inner carouselHeight">
                 <div class="carousel-item active">
                     <img src="img/main1.png" class="d-block w-100" alt="imagen de escuela 1">
                 </div>
@@ -118,6 +126,33 @@
     </section>
     <!-- Fin slider con fotos del lugar -->
 
+    <!-- Grid Index con acceso a a Servicios -->
+    <section>
+        <div class="container">
+            <div class="gridIndexServicios">
+                <div class="serviciosInclusion">
+                    <a href="pages/inclusion.html">
+                        <img src="img/manos.png" alt=" imagen de manos juntas">
+                        <p>Inclusión</p>
+                    </a>
+                </div>
+                <div class="serviciosPrimario">
+                    <a href="pages/primaria.html">
+                        <img src="img/pizarron.png" alt=" imagen de pizarra">
+                        <p>Primaria</p>
+                    </a>
+                </div>
+                <div class="serviciosCfi">
+                    <a href="pages/cfi.html">
+                        <img src="img/estrechanmanos.png" alt=" imagen de personas estrechando manos">
+                        <p>CFI</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin Grid Index con acceso a a Servicios -->
+
     <!-- Sección con links -->
     <section class="contenedor">
         <img class="imagenMensaje" src="img/mensaje-home.png">
@@ -132,12 +167,13 @@
             <div class="tarjeta">
                 <a href="pages/galeria.html">
                     <p>Galería</p>
-                    <img class="imagenGaleria imagenDos" src="img/banner_escuela_vieja.png" alt="imagen edificio de la escuela">
+                    <img class="imagenGaleria imagenDos" src="img/banner_escuela_vieja.png"
+                        alt="imagen edificio de la escuela">
                 </a>
             </div>
             <div class="tarjeta">
                 <a href="pages/servicios.html">
-                    <p>Servicios</p>
+                    <p>Instalaciones</p>
                     <img class="imagenGaleria imagenTres" src="img/banner_aula.png" alt="imagen de aula">
                 </a>
             </div>

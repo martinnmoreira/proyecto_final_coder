@@ -23,6 +23,88 @@
     height: 18rem;
 }
 
+// Grid Index con acceso a Servicios
+    
+.gridIndexServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "serviciosInclusion serviciosPrimario serviciosCfi"
+    ;
+    // grid-row-gap: 10px;
+    margin-top: 2rem;
+    justify-content: center;
+    }
+    
+    .serviciosInclusion {
+        grid-area: serviciosInclusion;
+            a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-content: space-around;
+            background-color: $color-verde;
+            width: 100%;
+            height: 30rem;
+            img {
+                width: 12rem;
+                align-self: center;
+                
+            }
+            p {
+                color: $color-blanco;
+                text-align: center;
+            }
+        }
+    }
+    
+    .serviciosPrimario {
+        grid-area: serviciosPrimario;
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-content: space-around;
+            background-color: $color-celeste;
+            width: 100%;
+            height: 30rem;
+            img {
+                width: 12rem;
+                align-self: center;
+                
+            }
+            p {
+                color: $color-blanco;
+                text-align: center;
+            }
+        }
+    }
+    
+    .serviciosCfi {
+        grid-area: serviciosCfi;
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-content: space-around;
+            background-color: $color-naranja;
+            width: 100%;
+            height: 30rem;
+            img {
+                width: 12rem;
+                align-self: center;
+                
+            }
+            p {
+                color: $color-blanco;
+                text-align: center;
+            }
+        }
+    }
+
+// Fin Grid Index con acceso a a Servicios
+
 /* GRID TARJETAS */
 
 .gridTarjetas {
@@ -54,6 +136,6 @@
 
 .tarjeta {
     border: 2px solid $color-blanco;
-    border-radius: 1rem;
+    // border-radius: 1rem;
     width: auto;
 }

@@ -9,16 +9,30 @@
 }
 
 .panelHeading {
-    color: $color-gris-oscuro;
-    background-color: $color-verde;
     height: 4rem;
     padding-top: 1rem;
-    h2 {
-        font-size: 1.8rem;
-        color: $color-blanco;
-        margin-left: 10px;
-    }
+    font-size: 1.8rem;
+    color: $color-blanco;
+    // h2 {
+    //     font-size: 1.8rem;
+    //     color: $color-blanco;
+    //     margin-left: 10px;
+    // }
 }
+
+.fondoVerde {
+    background-color: $color-verde;
+}
+
+.fondoCeleste {
+    background-color: $color-celeste;
+}
+
+.fondoNaranja {
+    background-color: $color-naranja;
+}
+
+
 
 .gridContenedorEscuela {
     display: grid;
