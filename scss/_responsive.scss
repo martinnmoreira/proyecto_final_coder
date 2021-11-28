@@ -23,7 +23,7 @@
         
         .serviciosInclusion {
             grid-area: serviciosInclusion;
-            width: 28rem;
+            width: 100%;
                 a {
                     display: flex;
                     flex-direction: column;
@@ -45,7 +45,7 @@
         
         .serviciosPrimario {
             grid-area: serviciosPrimario;
-            width: 28rem;
+            width: 100%;
             a {
                 display: flex;
                 flex-direction: column;
@@ -67,7 +67,7 @@
     
     .serviciosCfi {
         grid-area: serviciosCfi;
-        width: 28rem;
+        width: 100%;
         align-self: center;
         a {
             display: flex;
@@ -89,10 +89,6 @@
     }
 
 // Fin Grid Index con acceso a a Servicios
-
-    .container {
-        padding: 3px!important;
-    }
 
     .tarjetaCabecera {
         margin: auto;
@@ -156,7 +152,7 @@
         }
 
     .carouselHeight {
-        height: 15rem;
+        height: 20rem;
     }
 
     /* VISTA MOVIL PAGINA LA ESCUELA */

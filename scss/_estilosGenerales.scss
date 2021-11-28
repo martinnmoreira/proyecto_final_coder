@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 * {
     text-decoration: none;
@@ -28,4 +28,12 @@ p, li {
 
 a {
     text-decoration: none;
+}
+
+.paddingCero {
+    padding: 0;
+}
+
+.marginFinal {
+    margin-bottom: 1rem;
 }
