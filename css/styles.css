@@ -487,9 +487,6 @@ a {
   opacity: 0.7;
   margin-bottom: 3rem; }
 
-.ImagenesServicios {
-  width: 35rem; }
-
 .tarjetasDivisoriasVerdes, .tarjetasDivisoriasVerdesExt {
   color: #fbfbfb;
   height: 12rem;
@@ -889,9 +886,6 @@ a {
     width: 22rem;
     height: 17rem;
     margin: 1rem; }
-  .imagenGaleria:hover {
-    filter: grayscale(100%);
-    z-index: 5; }
   .gridPadreGaleria {
     display: grid;
     grid-template-columns: 1fr;

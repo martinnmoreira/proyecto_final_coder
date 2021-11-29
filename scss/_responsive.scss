@@ -229,11 +229,6 @@
         margin: 1rem;
     }
 
-    .imagenGaleria:hover {
-        filter: grayscale(100%);
-        z-index: 5;
-    }
-
     .gridPadreGaleria {
         display: grid;
         grid-template-columns: 1fr;
