@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*IMPORTS*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 * {
   text-decoration: none;
   margin: 0px;
@@ -237,7 +237,10 @@ a {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto auto auto auto;
       grid-template-rows: auto auto auto auto;
-      grid-template-areas: "contenedorEscuela" "contenedorUbicacion" "contenedorInstitucional" "contenedorMaterias";
+      grid-template-areas: "contenedorEscuela"
+ "contenedorUbicacion"
+ "contenedorInstitucional"
+ "contenedorMaterias";
   grid-column-gap: 10px;
   margin-top: 1rem;
   justify-items: center;
@@ -420,7 +423,9 @@ a {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
-      grid-template-areas: "imagenUno imagenDos imagenTres imagenCuatro" "imagenCinco imagenSeis imagenSiete imagenOcho" "imagenNueve imagenDiez imagenOnce imagenDoce";
+      grid-template-areas: "imagenUno imagenDos imagenTres imagenCuatro"
+ "imagenCinco imagenSeis imagenSiete imagenOcho"
+ "imagenNueve imagenDiez imagenOnce imagenDoce";
   justify-items: center;
 }
 
@@ -728,7 +733,9 @@ a {
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
-        grid-template-areas: "imagenUno" "ImagenDos" "imagenTres";
+        grid-template-areas: "imagenUno"
+ "ImagenDos"
+ "imagenTres";
     grid-row-gap: 10px;
     padding-top: 2rem;
     width: auto;
@@ -835,7 +842,18 @@ a {
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
         grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
-        grid-template-areas: "imagenUno" "imagenDos" "imagenTres" "imagenCuatro" "imagenCinco" "imagenSeis" "imagenSiete" "imagenOcho" "imagenNueve" "imagenDiez" "imagenOnce" "imagenDoce";
+        grid-template-areas: "imagenUno"
+ "imagenDos"
+ "imagenTres"
+ "imagenCuatro"
+ "imagenCinco"
+ "imagenSeis"
+ "imagenSiete"
+ "imagenOcho"
+ "imagenNueve"
+ "imagenDiez"
+ "imagenOnce"
+ "imagenDoce";
     justify-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -982,7 +1000,8 @@ a {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
-        grid-template-areas: "imagenUno imagenDos" "imagenTres none";
+        grid-template-areas: "imagenUno imagenDos"
+ "imagenTres none";
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     padding-top: 4rem;
@@ -1032,7 +1051,12 @@ a {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto auto auto auto auto auto;
         grid-template-rows: auto auto auto auto auto auto;
-        grid-template-areas: "imagenUno imagenDos" "imagenTres imagenCuatro" "imagenCinco imagenSeis" "imagenSiete imagenOcho" "imagenNueve imagenDiez" "imagenOnce imagenDoce";
+        grid-template-areas: "imagenUno imagenDos"
+ "imagenTres imagenCuatro"
+ "imagenCinco imagenSeis"
+ "imagenSiete imagenOcho"
+ "imagenNueve imagenDiez"
+ "imagenOnce imagenDoce";
     justify-items: center;
   }
   .imagenUno {

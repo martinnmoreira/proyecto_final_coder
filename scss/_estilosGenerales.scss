@@ -22,8 +22,13 @@ h1{
     text-align: center;
 }
 
-p, li {
+p, li{
     font-size: 1.6rem;
+    color: $color-gris-claro;
+}
+
+h2 {
+    color: $color-gris-claro;
 }
 
 a {
@@ -36,4 +41,82 @@ a {
 
 .marginFinal {
     margin-bottom: 1rem;
+}
+
+.clearStylesMP {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.clearStylesBorderRadius {
+    border-radius: 0;
+}
+
+.transicion:hover {
+    transform: scale(1.5);
+    transition: 2s;
+}
+
+.animacionIzquierda {
+    animation-duration: 2s;
+    animation-name: slideinIzquierda;
+    overflow: hidden;
+}
+
+@keyframes slideinIzquierda {
+    from {
+        transform: translateX(-300%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.animacionDerecha {
+    animation-duration: 2s;
+    animation-name: slideinDerecha;
+    overflow: hidden;
+}
+
+@keyframes slideinDerecha {
+    from {
+        transform: translateX(300%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.animacionArriba {
+    animation-duration: 2s;
+    animation-name: slideinArriba;
+    overflow: hidden;
+}
+
+@keyframes slideinArriba {
+    from {
+        transform: translatey(-300%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.animacionAbajo {
+    animation-duration: 2s;
+    animation-name: slideinAbajo;
+    overflow: hidden;
+}
+
+@keyframes slideinAbajo {
+    from {
+        transform: translateX(300%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.ImagenesServicios {
+    width: 35rem;
 }

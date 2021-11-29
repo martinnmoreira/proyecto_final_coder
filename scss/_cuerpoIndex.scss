@@ -21,6 +21,7 @@
 .imagenGaleria {
     width: 25rem;
     height: 18rem;
+    object-fit: cover;
 }
 
 // Grid Index con acceso a Servicios
@@ -32,7 +33,6 @@
     grid-template-areas:
         "serviciosInclusion serviciosPrimario serviciosCfi"
     ;
-    // grid-row-gap: 10px;
     margin-top: 2rem;
     justify-content: center;
     }
@@ -136,6 +136,5 @@
 
 .tarjeta {
     border: 2px solid $color-blanco;
-    // border-radius: 1rem;
     width: auto;
 }

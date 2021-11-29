@@ -5,19 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
+    <meta name="description" content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
     <meta name="keywords" content="ESCUELA, ESPECIAL, DISCAPACIDAD, CAPACIDADES, DIFERENTES, EDUCACIÓN, NIÑOS">
     <meta name="copy" content="Maitén">
     <meta name="author" content="Martin Nicolas Moreira">
     <meta property="og:title" content="Maitén">
-    <meta property="og:description"
-        content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
+    <meta property="og:description" content="Educación Especial de Nivel Inicial y Primaria que tiene al alumno como protagonista. Un Proyecto Educativo con foco en el bienestar como objetivo fundamental de aprendizaje">
     <meta property="og:image" content="img/logo.png">
     <meta property="og:locale" content="es_ES">
     <title>Maitén | Escuela especial</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" sizes="32x32"/>
     <!-- Fin Favicon -->
     <!-- Rel Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -33,7 +31,7 @@
         <div class="container">
             <div class="row w-100 d-flex justify-content-around align-items-baseline">
                 <div class="col-12 col-lg-3">
-                    <div class="logotipo tarjetaCabecera">
+                    <div class="logotipo tarjetaCabecera animacionIzquierda">
                         <h1><a href="index.html"><img src="img/logo.png" alt="logotivo de la web"></a></h1>
                         <p>
                             <a href="index.html">Amor, respeto y confianza</a>
@@ -41,20 +39,19 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 d-none d-lg-block .d-sm-none .d-md-block .d-none .d-sm-block">
-                    <div class="tarjetaCabecera">
+                    <div class="tarjetaCabecera animacionArriba">
                         <h2>Autorizado por la DGEGP</h2>
                         <p>Dirección General de Educación de Gestión Privada</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 d-none d-lg-block .d-sm-none .d-md-block .d-none .d-sm-block">
-                    <div class="tarjetaCabecera">
+                    <div class="tarjetaCabecera animacionDerecha">
                         <h2>Nivel Primario y Prelaboral</h2>
                         <p>Incorporado a la enseñanza oficial A-1227</p>
                     </div>
                 </div>
             </div>
         </div>
-
     </header>
     <!-- Fin de la cabecera -->
     <!-- Menú de navegación -->
@@ -66,19 +63,19 @@
             </button>
             <div class="collapse navbar-collapse navbarCentrado" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link activo" href="index.html">Inicio</a>
-                    <a class="nav-link" href="pages/laescuela.html">La Escuela</a>
+                    <a class="nav-link transicion activo" href="index.html">Inicio</a>
+                    <a class="nav-link transicion" href="pages/laescuela.html">La Escuela</a>
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
-                        <ul class="dropdown-menu navegador" aria-labelledby="navbarDropdown" style="margin: 0; border-radius: 0; padding: 0;">
-                            <li><a class="dropdown-item nav-link" href="pages/inclusion.html">Inclusión</a></li>
-                            <li><a class="dropdown-item nav-link" href="pages/primaria.html">Primario</a></li>
-                            <li><a class="dropdown-item nav-link" href="pages/cfi.html">CFI</a></li>
+                        <a class="nav-link dropdown-toggle transicion" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu navegador clearStylesMP clearStylesBorderRadius" aria-labelledby="navbarDropdown">
+                            <li class="transicion"><a class="dropdown-item nav-link" href="pages/inclusion.html">Inclusión</a></li>
+                            <li class="transicion"><a class="dropdown-item nav-link" href="pages/primaria.html">Primario</a></li>
+                            <li class="transicion"><a class="dropdown-item nav-link" href="pages/cfi.html">CFI</a></li>
                         </ul>
                     </div>
-                    <a class="nav-link" href="pages/instalaciones.html">Instalaciones</a>
-                    <a class="nav-link" href="pages/galeria.html">Galería</a>
-                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    <a class="nav-link transicion" href="pages/instalaciones.html">Instalaciones</a>
+                    <a class="nav-link transicion" href="pages/galeria.html">Galería</a>
+                    <a class="nav-link transicion" href="pages/contacto.html">Contacto</a>
                 </div>
             </div>
         </div>
@@ -109,7 +106,7 @@
                     <img src="img/main3.png" class="d-block w-100 carouselHeight" alt="imagen de escuela 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/main4.png" class="d-block w-100" alt="imagen de escuela 4">
+                    <img src="img/main4.png" class="d-block w-100 carouselHeight" alt="imagen de escuela 4">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -128,23 +125,23 @@
 
     <!-- Grid Index con acceso a a Servicios -->
     <section>
-        <div class="container">
+        <div class="container paddingCero">
             <div class="gridIndexServicios">
                 <div class="serviciosInclusion">
                     <a href="pages/inclusion.html">
-                        <img src="img/manos.png" alt=" imagen de manos juntas">
+                        <img src="img/manos.png" alt="imagen de manos juntas">
                         <p>Inclusión</p>
                     </a>
                 </div>
                 <div class="serviciosPrimario">
                     <a href="pages/primaria.html">
-                        <img src="img/pizarron.png" alt=" imagen de pizarra">
+                        <img src="img/pizarron.png" alt="imagen de pizarra">
                         <p>Primaria</p>
                     </a>
                 </div>
                 <div class="serviciosCfi">
                     <a href="pages/cfi.html">
-                        <img src="img/estrechanmanos.png" alt=" imagen de personas estrechando manos">
+                        <img src="img/estrechanmanos.png" alt="imagen de personas estrechando manos">
                         <p>CFI</p>
                     </a>
                 </div>
@@ -195,12 +192,12 @@
                 <div class="col-12 col-lg-3 marginTarjetasMovil">
                     <ul class="linksFooter">
                         <h2 class="redesFooter">Info</h2>
-                        <li><a href="index.html" class="clBlanco transicion">Inicio</a></li>
-                        <li><a href="pages/laescuela.html" class="clBlanco transicion">La Escuela</a></li>
-                        <li><a href="pages/servicios.html" class="clBlanco transicion">Servicios</a></li>
-                        <li><a href="pages/instalaciones.html" class="clBlanco transicion">Instalaciones</a></li>
-                        <li><a href="pages/galeria.html" class="clBlanco transicion">Galería</a></li>
-                        <li><a href="pages/contacto.html" class="clBlanco transicion">Contacto</a></li>
+                        <li class="transicion"><a href="index.html" class="clBlanco">Inicio</a></li>
+                        <li class="transicion"><a href="pages/laescuela.html" class="clBlanco">La Escuela</a></li>
+                        <li class="transicion"><a href="pages/inclusion.html" class="clBlanco">Servicios</a></li>
+                        <li class="transicion"><a href="pages/instalaciones.html" class="clBlanco">Instalaciones</a></li>
+                        <li class="transicion"><a href="pages/galeria.html" class="clBlanco">Galería</a></li>
+                        <li class="transicion"><a href="pages/contacto.html" class="clBlanco">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3 marginTarjetasMovil">

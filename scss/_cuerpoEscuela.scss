@@ -13,11 +13,6 @@
     padding-top: 1rem;
     font-size: 1.8rem;
     color: $color-blanco;
-    // h2 {
-    //     font-size: 1.8rem;
-    //     color: $color-blanco;
-    //     margin-left: 10px;
-    // }
 }
 
 .fondoVerde {
@@ -93,12 +88,9 @@
 .ubicacionMapa {
     width: 50%;
     text-align: center;
-    margin: 1rem;
     .mapa {
         width: 100%;
         height: 30rem;
-        // border: 1px solid $color-gris-claro;
-        
     }
 }
 
@@ -108,11 +100,12 @@
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: $color-naranja;
+    background-color: $color-celeste;
     color: $color-blanco;
     border-radius: 1rem;
     padding: 1rem;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .cardFlexIntstitucional {

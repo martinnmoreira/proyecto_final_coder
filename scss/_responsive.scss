@@ -15,7 +15,6 @@
             "serviciosPrimario" 
             "serviciosCfi"
         ;
-        // grid-row-gap: 10px;
         margin-top: 2rem;
         justify-content: center;
         justify-items: center;
@@ -29,7 +28,6 @@
                     flex-direction: column;
                     justify-content: space-around;
                     background-color: $color-verde;
-                    // width: 100%;
                     height: 30rem;
                     img {
                         width: 12rem;
@@ -51,7 +49,6 @@
                 flex-direction: column;
                 justify-content: space-around;
                 background-color: $color-celeste;
-                // width: 100%;
                 height: 30rem;
                 img {
                     width: 12rem;
@@ -74,7 +71,6 @@
             flex-direction: column;
             justify-content: space-around;
             background-color: $color-naranja;
-            // width: 100%;
             height: 30rem;
             img {
                 width: 12rem;
@@ -372,7 +368,7 @@
 }
 
 /* VISTA TABLET */
-@media only screen and (min-width:577px) and (max-width:900px) {
+@media only screen and (min-width:577px) and (max-width:990px) {
 
     .container {
         padding: 3px!important;
@@ -546,6 +542,75 @@
         margin-top: 3rem;
         text-align: center;
         padding: 0px;
+    }
+
+}
+
+/* VISTA TABLET de 901 a 1200 px HTML GALERIA */
+
+@media only screen and (min-width:901px) and (max-width:1200px) {
+
+    .gridPadreGaleria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "imagenUno imagenDos"
+            "imagenTres imagenCuatro"
+            "imagenCinco imagenSeis"
+            "imagenSiete imagenOcho" 
+            "imagenNueve imagenDiez"
+            "imagenOnce imagenDoce"
+        ;
+        justify-items: center;
+    }
+
+    .imagenUno {
+        grid-area: imagenUno;
+    }
+
+    .imagenDos {
+        grid-area: imagenDos;
+    }
+
+    .imagenTres {
+        grid-area: imagenTres;
+    }
+
+    .imagenCuatro {
+        grid-area: imagenCuatro;
+    }
+
+    .imagenCinco {
+        grid-area: imagenCinco;
+    }
+
+    .imagenSeis {
+        grid-area: imagenSeis;
+    }
+
+    .imagenSiete {
+        grid-area: imagenSiete;
+    }
+
+    .imagenOcho {
+        grid-area: imagenOcho;
+    }
+
+    .imagenNueve {
+        grid-area: imagenNueve;
+    }
+
+    .imagenDiez {
+        grid-area: imagenDiez;
+    }
+
+    .imagenOnce {
+        grid-area: imagenOnce;
+    }
+
+    .imagenDoce {
+        grid-area: imagenDoce;
     }
 
 }

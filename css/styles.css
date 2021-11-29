@@ -20,7 +20,11 @@ h1 {
   text-align: center; }
 
 p, li {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  color: #666666; }
+
+h2 {
+  color: #666666; }
 
 a {
   text-decoration: none; }
@@ -30,6 +34,64 @@ a {
 
 .marginFinal {
   margin-bottom: 1rem; }
+
+.clearStylesMP {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.clearStylesBorderRadius {
+  border-radius: 0; }
+
+.transicion:hover {
+  transform: scale(1.5);
+  transition: 2s; }
+
+.animacionIzquierda {
+  animation-duration: 2s;
+  animation-name: slideinIzquierda;
+  overflow: hidden; }
+
+@keyframes slideinIzquierda {
+  from {
+    transform: translateX(-300%); }
+  to {
+    transform: translateX(0%); } }
+
+.animacionDerecha {
+  animation-duration: 2s;
+  animation-name: slideinDerecha;
+  overflow: hidden; }
+
+@keyframes slideinDerecha {
+  from {
+    transform: translateX(300%); }
+  to {
+    transform: translateX(0%); } }
+
+.animacionArriba {
+  animation-duration: 2s;
+  animation-name: slideinArriba;
+  overflow: hidden; }
+
+@keyframes slideinArriba {
+  from {
+    transform: translatey(-300%); }
+  to {
+    transform: translateX(0%); } }
+
+.animacionAbajo {
+  animation-duration: 2s;
+  animation-name: slideinAbajo;
+  overflow: hidden; }
+
+@keyframes slideinAbajo {
+  from {
+    transform: translateX(300%); }
+  to {
+    transform: translateX(0%); } }
+
+.ImagenesServicios {
+  width: 35rem; }
 
 /* CABECERA */
 .logotipo {
@@ -43,17 +105,18 @@ a {
     font-size: 1.7rem;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
-    margin-top: 1rem;
-    text-shadow: 0px 2px 1px #333333;
     transition: all 300ms;
-    padding-bottom: 2rem;
     text-align: center; }
     .logotipo p a {
       text-decoration: none;
       font-family: Arial, Helvetica, sans-serif;
       color: #63B945; }
-  .logotipo h1:hover {
-    text-shadow: 0px 2px 1px #333333, 0px 0px 4px #63B945; }
+  .logotipo a {
+    text-align: center; }
+  .logotipo h1 {
+    margin: 0; }
+    .logotipo h1:hover {
+      text-shadow: 0px 2px 1px #333333, 0px 0px 4px #63B945; }
 
 .tarjetaCabecera {
   width: 30rem; }
@@ -105,7 +168,8 @@ a {
 
 /* Propiedades Carousel */
 .carouselHeight {
-  height: 44.3rem; }
+  height: 44.3rem;
+  object-fit: cover; }
 
 /* SECCION TARJETAS INDEX */
 .contenedor {
@@ -125,7 +189,8 @@ a {
 
 .imagenGaleria {
   width: 25rem;
-  height: 18rem; }
+  height: 18rem;
+  object-fit: cover; }
 
 .gridIndexServicios {
   display: grid;
@@ -277,8 +342,7 @@ a {
 
 .ubicacionMapa {
   width: 50%;
-  text-align: center;
-  margin: 1rem; }
+  text-align: center; }
   .ubicacionMapa .mapa {
     width: 100%;
     height: 30rem; }
@@ -289,11 +353,12 @@ a {
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #FF8800;
+  background-color: #3EB5C9;
   color: #fbfbfb;
   border-radius: 1rem;
   padding: 1rem;
-  margin: 1rem; }
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 .cardFlexIntstitucional {
   flex-grow: 1;
@@ -415,6 +480,16 @@ a {
 #boton3 {
   background-color: blue; }
 
+.imagenInclusionPrincipal {
+  width: 100%;
+  height: 42rem;
+  object-fit: cover;
+  opacity: 0.7;
+  margin-bottom: 3rem; }
+
+.ImagenesServicios {
+  width: 35rem; }
+
 .tarjetasDivisoriasVerdes, .tarjetasDivisoriasVerdesExt {
   color: #fbfbfb;
   height: 12rem;
@@ -429,7 +504,15 @@ a {
   .tarjetasDivisoriasVerdesExt p {
     text-align: center;
     font-size: 2.2rem;
-    margin: 1.5rem; }
+    margin: 1.5rem;
+    color: #fbfbfb; }
+
+.imagenPrimarioPrincipal {
+  width: 100%;
+  height: 42rem;
+  object-fit: cover;
+  opacity: 0.7;
+  margin-bottom: 3rem; }
 
 .tarjetasDivisoriasNaranjas, .tarjetasDivisoriasNaranjasExt {
   color: #fbfbfb;
@@ -445,7 +528,15 @@ a {
   .tarjetasDivisoriasNaranjasExt p {
     text-align: center;
     font-size: 2.2rem;
-    margin: 1.5rem; }
+    margin: 1.5rem;
+    color: #fbfbfb; }
+
+.imagenCfiPrincipal {
+  width: 100%;
+  height: 42rem;
+  object-fit: cover;
+  opacity: 0.7;
+  margin-bottom: 3rem; }
 
 .tarjetasDivisoriasCelestes, .tarjetasDivisoriasCelestesExt {
   color: #fbfbfb;
@@ -461,17 +552,14 @@ a {
   .tarjetasDivisoriasCelestesExt p {
     text-align: center;
     font-size: 2.2rem;
-    margin: 1.5rem; }
+    margin: 1.5rem;
+    color: #fbfbfb; }
 
 /*SECCION GALERIA */
 .contenedorGaleria {
-  text-align: center;
-  margin: 1rem;
+  margin-top: 1rem;
   padding: 1rem;
-  background-color: #fbfbfb;
-  border: solid 1px #99A799;
-  border-radius: 4px;
-  width: auto; }
+  background-color: #fbfbfb; }
   .contenedorGaleria h2 {
     font-size: 1.8rem;
     color: #666666;
@@ -479,21 +567,22 @@ a {
 
 .imagenGaleria {
   width: 25rem;
-  height: 22rem;
-  margin: 10px;
+  margin: 1rem;
   opacity: 0.7; }
 
 .imagenGaleria:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transition: 2s;
   opacity: 1;
   z-index: 5; }
 
 .gridPadreGaleria {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "imagenUno imagenDos imagenTres imagenCuatro" "imagenCinco imagenSeis imagenSiete imagenOcho" "imagenNueve imagenDiez imagenOnce imagenDoce";
-  justify-items: center; }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "imagenUno imagenDos imagenTres" "imagenCuatro imagenCinco imagenSeis" "imagenSiete imagenOcho imagenNueve" "imagenDiez imagenOnce imagenDoce";
+  justify-items: center;
+  justify-content: center; }
 
 .imagenUno {
   grid-area: imagenUno; }
@@ -532,28 +621,18 @@ a {
   grid-area: imagenDoce; }
 
 /* LISTADO DE HTML DE INSTALACIONES */
-.listadoInstalaciones {
+.imagenesInstalaciones {
   display: flex;
-  flex-flow: column wrap;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid #63B945;
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 60rem; }
-  .listadoInstalaciones ol {
-    margin-left: 2rem;
-    padding-top: 3rem;
-    margin-bottom: 3rem; }
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem; }
 
 /* FORMULARIO DE CONTACTO */
 .contactForm {
   width: 46rem;
   height: auto;
   margin: 1.5rem auto;
-  border-radius: 1rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
   background-color: #fbfbfb;
@@ -638,10 +717,6 @@ a {
   border: 1px solid #97d848; }
 
 /* FOOTER */
-.transicion:hover {
-  transition: 2s;
-  font-size: 2rem; }
-
 /* CSS FOOTER CON BOOTSTRAP */
 .bgGrey {
   background-color: #333333; }
@@ -655,9 +730,6 @@ a {
 .linksFooter {
   list-style: none;
   padding-left: 0; }
-
-.linksFooter a:hover {
-  color: #63B945; }
 
 .btn {
   border-color: #fbfbfb; }
@@ -675,6 +747,8 @@ a {
   margin-top: 2rem;
   text-align: center;
   padding: 0px; }
+  .marginTarjetasMovil p {
+    color: #fbfbfb; }
 
 /*VISTA MOVIL */
 /*VISTA MOVIL CUERPO INDEX*/
@@ -887,7 +961,7 @@ a {
     padding: 0px; } }
 
 /* VISTA TABLET */
-@media only screen and (min-width: 577px) and (max-width: 900px) {
+@media only screen and (min-width: 577px) and (max-width: 990px) {
   .container {
     padding: 3px !important; }
   .tarjetaCabecera {
@@ -979,6 +1053,39 @@ a {
     margin-top: 3rem;
     text-align: center;
     padding: 0px; } }
+
+/* VISTA TABLET de 901 a 1200 px HTML GALERIA */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .gridPadreGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "imagenUno imagenDos" "imagenTres imagenCuatro" "imagenCinco imagenSeis" "imagenSiete imagenOcho"  "imagenNueve imagenDiez" "imagenOnce imagenDoce";
+    justify-items: center; }
+  .imagenUno {
+    grid-area: imagenUno; }
+  .imagenDos {
+    grid-area: imagenDos; }
+  .imagenTres {
+    grid-area: imagenTres; }
+  .imagenCuatro {
+    grid-area: imagenCuatro; }
+  .imagenCinco {
+    grid-area: imagenCinco; }
+  .imagenSeis {
+    grid-area: imagenSeis; }
+  .imagenSiete {
+    grid-area: imagenSiete; }
+  .imagenOcho {
+    grid-area: imagenOcho; }
+  .imagenNueve {
+    grid-area: imagenNueve; }
+  .imagenDiez {
+    grid-area: imagenDiez; }
+  .imagenOnce {
+    grid-area: imagenOnce; }
+  .imagenDoce {
+    grid-area: imagenDoce; } }
 
 .tituloPrincipal {
   font-size: 25rem; }

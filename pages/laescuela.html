@@ -15,7 +15,7 @@
     <meta property="og:locale" content="es_ES">
     <title>Maitén | La Escuela</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png" sizes="32x32"/>
     <!-- Fin Favicon -->
     <!-- Rel Bootstrap -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row w-100 d-flex justify-content-around align-items-baseline">
                 <div class="col-12 col-lg-3">
-                    <div class="logotipo tarjetaCabecera">
+                    <div class="logotipo tarjetaCabecera animacionIzquierda">
                         <a href="../index.html"><img src="../img/logo.png" alt="logotivo de la web"></a>
                         <p>
                             <a href="../index.html">Amor, respeto y confianza</a>
@@ -39,13 +39,13 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 d-none d-lg-block .d-sm-none .d-md-block .d-none .d-sm-block">
-                    <div class="tarjetaCabecera">
+                    <div class="tarjetaCabecera animacionArriba">
                         <h2>Autorizado por la DGEGP</h2>
                         <p>Dirección General de Educación de Gestión Privada</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 d-none d-lg-block .d-sm-none .d-md-block .d-none .d-sm-block">
-                    <div class="tarjetaCabecera">
+                    <div class="tarjetaCabecera animacionDerecha">
                         <h2>Nivel Primario y Prelaboral</h2>
                         <p>Incorporado a la enseñanza oficial A-1227</p>
                     </div>
@@ -66,11 +66,11 @@
                     <a class="nav-link transicion" href="../index.html">Inicio</a>
                     <a class="nav-link transicion activo" href="laescuela.html">La Escuela</a>
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
-                        <ul class="dropdown-menu navegador" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="inclusion.html">Inclusión</a></li>
-                            <li><a class="dropdown-item" href="primaria.html">Primario</a></li>
-                            <li><a class="dropdown-item" href="cfi.html">CFI</a></li>
+                        <a class="nav-link dropdown-toggle transicion" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu navegador clearStylesMP clearStylesBorderRadius" aria-labelledby="navbarDropdown">
+                            <li class="transicion"><a class="dropdown-item" href="inclusion.html">Inclusión</a></li>
+                            <li class="transicion"><a class="dropdown-item" href="primaria.html">Primario</a></li>
+                            <li class="transicion"><a class="dropdown-item" href="cfi.html">CFI</a></li>
                         </ul>
                     </div>
                     <a class="nav-link transicion" href="instalaciones.html">Instalaciones</a>
@@ -117,41 +117,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed panelHeading fondoCeleste" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Ubicación
+                        Institucional
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <div class="panelDescripcionFlex">
-                            <div class="ubicacionDescripcion">
-                                <p>La Institución se encuentra ubicada en la calle <strong>La Paz 3145, ex 247</strong>,
-                                    entre Congreso y Martín Lange, de la localidad de <strong>Villa Ballester, Partido de
-                                        Gral. San Martín Pcia. de Buenos Aires.</strong></p>
-                                <p>Es un barrio residencial, con calles asfaltadas y arboleda añosa.</p>
-                                <p><strong>La Escuela Especial Maitén</strong> está a 6 cuadras de la estación de
-                                    ferrocarril de <strong>Villa Ballester (Línea Mitre)</strong>, contando con salida a
-                                    Capital Federal y diversas localidades de la Pcia. de Bs. As. a través de varias líneas
-                                    de transporte público.</p>
-                            </div>
-                            <div class="ubicacionMapa">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.929795960545!2d-58.55795458527457!3d-34.555332862445574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9fd0ac5b6f5%3A0xafad0c66d329a6fe!2sLa%20Paz%203145%2C%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1635684907497!5m2!1ses-419!2sar"
-                                    class="mapa" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed panelHeading fondoNaranja" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Institucional
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
                         <div class="tarjetasInstitucional">
-                            <div class="cardFlexIntstitucional cardFlexIntstitucionalTamano">
+                            <div class="cardFlexIntstitucional cardFlexIntstitucionalTamano animacionIzquierda">
                                 <div>
                                     <h3>Niños y adolescentes 1º,2º y 3º ciclo en la modalidad educación especial, nivelación
                                         y recuperación.</h3>
@@ -164,7 +136,7 @@
                                     <a href="contacto.html" class="botonGenerico">ADMISIÓN</a>
                                 </div>
                             </div>
-                            <div class="cardFlexIntstitucional cardFlexIntstitucionalTamano">
+                            <div class="cardFlexIntstitucional cardFlexIntstitucionalTamano animacionDerecha">
                                 <div>
                                     <h3>Modalidad: doble jornada optativa</h3>
                                     <p>Turno Mañana de 8:30 a 12:30 hs.</p>
@@ -172,8 +144,36 @@
                                     <p>Escolaridad curricular en grupos reducidos</p>
                                 </div>
                                 <div>
-                                    <a href="#Materias" class="botonGenerico">VER MATERIAS</a>
+                                    <a href="#flush-headingFour" class="botonGenerico">VER MATERIAS</a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed panelHeading fondoNaranja" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Ubicación
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="panelDescripcionFlex">
+                            <div class="ubicacionDescripcion animacionIzquierda">
+                                <p>La Institución se encuentra ubicada en la calle <strong>La Paz 3145, ex 247</strong>,
+                                    entre Congreso y Martín Lange, de la localidad de <strong>Villa Ballester, Partido de
+                                        Gral. San Martín Pcia. de Buenos Aires.</strong></p>
+                                <p>Es un barrio residencial, con calles asfaltadas y arboleda añosa.</p>
+                                <p><strong>La Escuela Especial Maitén</strong> está a 6 cuadras de la estación de
+                                    ferrocarril de <strong>Villa Ballester (Línea Mitre)</strong>, contando con salida a
+                                    Capital Federal y diversas localidades de la Pcia. de Bs. As. a través de varias líneas
+                                    de transporte público.</p>
+                            </div>
+                            <div class="ubicacionMapa animacionDerecha">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.929795960545!2d-58.55795458527457!3d-34.555332862445574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9fd0ac5b6f5%3A0xafad0c66d329a6fe!2sLa%20Paz%203145%2C%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1635684907497!5m2!1ses-419!2sar"
+                                    class="mapa" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
@@ -208,110 +208,6 @@
         </div>
     </section>
 
-
-
-
-    <!-- <section>
-        <article>
-            <div class="gridContenedorEscuela">
-                <div class="contenedorArticulos contenedorEscuela">
-                    <div class="panelHeading">
-                        <h2>¿Por qué nuestra escuela lleva dicho nombre?</h2>
-                    </div>
-                    <div class="panelDescripcion">
-                        <p>Según una creencia mapuche, que atribuye alma a cada una de los elementos de la naturaleza,
-                            el <strong>Maitén</strong> es un árbol protector que ayuda a los hombres cuando se
-                            encuentran en dificultad.</p>
-                        <p><strong>¨El Maitén es el árbol de la buena suerte.¨</strong> Nosotros queremos que nuestra
-                            escuela se transforme en un Maitén que brinde protección y ayuda a quienes más los
-                            necesitan, <strong>¨los niños especiales¨</strong>.</p>
-                        <p>Cada rama, cada hoja y cada fruto de este <b>Maitén</b> seremos cada uno de nosotros,
-                            deseamos crecer íntegramente y conformar una unidad.</p>
-                        <p>Todos los días regaremos este Maitén con el <strong>AMOR, EL RESPETO Y LA CONFIANZA</strong>.
-                        </p>
-                        <p><strong>Seremos un árbol amigo. Seremos una escuela que crece y se abre a la
-                                comunidad</strong>.</p>
-                        <p>La Escuela Especial Maitén se fundó el 14 de marzo de 1994, con el fin de brindar atención a
-                            personas con necesidades educativas especiales derivadas de la discapacidad.</p>
-                    </div>
-                </div>
-                <div class="contenedorArticulos contenedorUbicacion">
-                    <div class="panelHeading">
-                        <h2>Ubicación</h2>
-                    </div>
-                    <div class="panelDescripcionFlex">
-                        <div class="ubicacionDescripcion">
-                            <p>La Institución se encuentra ubicada en la calle <strong>La Paz 3145, ex 247</strong>,
-                                entre Congreso y Martín Lange, de la localidad de <strong>Villa Ballester, Partido de
-                                    Gral. San Martín Pcia. de Buenos Aires.</strong></p>
-                            <p>Es un barrio residencial, con calles asfaltadas y arboleda añosa.</p>
-                            <p><strong>La Escuela Especial Maitén</strong> está a 6 cuadras de la estación de
-                                ferrocarril de <strong>Villa Ballester (Línea Mitre)</strong>, contando con salida a
-                                Capital Federal y diversas localidades de la Pcia. de Bs. As. a través de varias líneas
-                                de transporte público.</p>
-                        </div>
-                        <div class="ubicacionMapa">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.929795960545!2d-58.55795458527457!3d-34.555332862445574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9fd0ac5b6f5%3A0xafad0c66d329a6fe!2sLa%20Paz%203145%2C%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1635684907497!5m2!1ses-419!2sar"
-                                class="mapa" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="contenedorArticulos contenedorInstitucional">
-                    <div class="panelHeading">
-                        <h2>Institucional</h2>
-                    </div>
-                    <div class="tarjetasInstitucional">
-                        <div class="cardFlexIntstitucional cardFlexIntstitucionalTamano">
-                            <div>
-                                <h3>Niños y adolescentes 1º,2º y 3º ciclo en la modalidad educación especial, nivelación
-                                    y recuperación.</h3>
-                                <p>Nuestro proyecto educativo esta constituido para niños y adolescentes con
-                                    discapacidad leve y moderada. Esta orientado por los Planes de Estudio de Educación
-                                    Especial RM Nº 717/88, RM Nº 1332/92 y adaptaciones de la Currícula Oficial,
-                                    brindando aprendizaje personalizado y seguimiento individual.</p>
-                            </div>
-                            <div>
-                                <a href="contacto.html" class="botonGenerico">ADMISIÓN</a>
-                            </div>
-                        </div>
-                        <div class="cardFlexIntstitucional cardFlexIntstitucionalTamano">
-                            <div>
-                                <h3>Modalidad: doble jornada optativa</h3>
-                                <p>Turno Mañana de 8:30 a 12:30 hs.</p>
-                                <p>Jornada Completa de 8:30 a 16:30 hs.</p>
-                                <p>Escolaridad curricular en grupos reducidos</p>
-                            </div>
-                            <div>
-                                <a href="#Materias" class="botonGenerico">VER MATERIAS</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="Materias" class="contenedorArticulos contenedorMaterias">
-                    <div class="panelHeading">
-                        <h2>Materias / Áreas</h2>
-                    </div>
-                    <div class="panelDescripcion">
-                        <ul>
-                            <li>Matemática, lengua, Cs. Sociales, Cs. Naturales</li>
-                            <li>Educación física</li>
-                            <li>Fonoaudiología</li>
-                            <li>Taller de Huerta, Cocina, Bijouterie, AVD y Arte</li>
-                            <li>Terapia Ocupacional</li>
-                            <li>Natación</li>
-                            <li>Computación</li>
-                            <li>Musicoterapia</li>
-                            <li>Taller de Danzas</li>
-                            <li>Talleres de Orientación Manual y Artística</li>
-                            <li>Psicología</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </section> -->
-
     <!-- Fin de Sección central -->
 
     <!-- Inicio del footer -->
@@ -329,12 +225,12 @@
                 <div class="col-12 col-lg-3 marginTarjetasMovil">
                     <ul class="linksFooter">
                         <h2 class="redesFooter">Info</h2>
-                        <li><a href="../index.html" class="clBlanco transicion">Inicio</a></li>
-                        <li><a href="laescuela.html" class="clBlanco transicion">La Escuela</a></li>
-                        <li><a href="servicios.html" class="clBlanco transicion">Servicios</a></li>
-                        <li><a href="instalaciones.html" class="clBlanco transicion">Instalaciones</a></li>
-                        <li><a href="galeria.html" class="clBlanco transicion">Galería</a></li>
-                        <li><a href="contacto.html" class="clBlanco transicion">Contacto</a></li>
+                        <li class="transicion"><a href="../index.html" class="clBlanco">Inicio</a></li>
+                        <li class="transicion"><a href="laescuela.html" class="clBlanco">La Escuela</a></li>
+                        <li class="transicion"><a href="inclusion.html" class="clBlanco">Servicios</a></li>
+                        <li class="transicion"><a href="instalaciones.html" class="clBlanco">Instalaciones</a></li>
+                        <li class="transicion"><a href="galeria.html" class="clBlanco">Galería</a></li>
+                        <li class="transicion"><a href="contacto.html" class="clBlanco">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3 marginTarjetasMovil">
