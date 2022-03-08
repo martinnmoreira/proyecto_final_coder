@@ -1136,3 +1136,16 @@ a {
     padding: 0px;
   }
 }
+/*# sourceMappingURL=styles.css.map */
+.contenedorCardsJavaScript{
+  display: flex;
+  flex-direction: row;
+}
+
+.cardServicio{
+  margin: 2px;
+  padding: 5px;
+  width: 300px;
+  border: 1px solid gray;
+  gap: 1px;
+}

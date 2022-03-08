@@ -111,19 +111,20 @@ opcion3.innerHTML = serviceNameC;
 let checkbox1 = document.getElementById("check1");
 checkbox1.addEventListener("change", respuestaClick);
     function respuestaClick(){
-        contenedorCardsJavaScript = document.querySelector(".contenedorCardsJavaScript");
-        //contenedorCardsJavaScript.innerHTML = ''
-
-        for (const integracion of listaIntegracion) {
-            let contenedorIntegracion = document.createElement("div");
-            contenedorIntegracion.innerHTML = `<div class="cardServicio">
-                                    <h3>${integracion.nombre}</h3>
-                                    <p>Horas recomendadas: ${integracion.cantidadHoras}</p>
-                                    <b> Valor Hora: $ ${integracion.precio}</b>
-                                    <button>Solicitar</button>
-                                    </div>`
-            contenedorCardsJavaScript.appendChild(contenedorIntegracion);
-            console.log(contenedorIntegracion.innerHTML);
+        contenedorCardsIntegracion = document.querySelector(".contenedorCardsIntegracion");
+        contenedorCardsIntegracion.innerHTML = '';
+        if (checkbox1.checked){
+            for (const integracion of listaIntegracion) {
+                let contenedorIntegracion = document.createElement("div");
+                contenedorIntegracion.innerHTML = `<div class="cardServicio">
+                                        <h3>${integracion.nombre}</h3>
+                                        <p>Horas recomendadas: ${integracion.cantidadHoras}</p>
+                                        <b> Valor Hora: $ ${integracion.precio}</b>
+                                        <button>Solicitar</button>
+                                        </div>`
+                contenedorCardsIntegracion.appendChild(contenedorIntegracion);
+                console.log(contenedorIntegracion.innerHTML);
+            }
         }
     }
 
@@ -131,38 +132,40 @@ checkbox1.addEventListener("change", respuestaClick);
 let checkbox2 = document.getElementById("check2");
 checkbox2.addEventListener("click", respuestaClick2);
     function respuestaClick2(){
-        contenedorCardsJavaScript = document.querySelector(".contenedorCardsJavaScript");
-        //contenedorCardsJavaScript.innerHTML = ''
-
-        for (const terapia of listaTerapias) {
-            let contenedorTerapias = document.createElement("div");
-            contenedorTerapias.innerHTML = `<div class="cardServicio">
-                                    <h3>${terapia.nombre}</h3>
-                                    <p>Horas recomendadas: ${terapia.cantidadHoras}</p>
-                                    <b> Valor Hora: $ ${terapia.precio}</b>
-                                    <button>Solicitar</button>
-                                    </div>`
-            contenedorCardsJavaScript.appendChild(contenedorTerapias);
-            console.log(contenedorTerapias.innerHTML);
+        contenedorCardsTerapias = document.querySelector(".contenedorCardsTerapias");
+        contenedorCardsTerapias.innerHTML = '';
+        if (checkbox2.checked){
+            for (const terapia of listaTerapias) {
+                let contenedorTerapias = document.createElement("div");
+                contenedorTerapias.innerHTML = `<div class="cardServicio">
+                                        <h3>${terapia.nombre}</h3>
+                                        <p>Horas recomendadas: ${terapia.cantidadHoras}</p>
+                                        <b> Valor Hora: $ ${terapia.precio}</b>
+                                        <button>Solicitar</button>
+                                        </div>`
+                contenedorCardsTerapias.appendChild(contenedorTerapias);
+                console.log(contenedorTerapias.innerHTML);
+            }
         }
     }
 
 let checkbox3 = document.getElementById("check3");
 checkbox3.addEventListener("click", respuestaClick3);
     function respuestaClick3(){
-        contenedorCardsJavaScript = document.querySelector(".contenedorCardsJavaScript");
-        //contenedorCardsJavaScript.innerHTML = ''
-
-        for (const acompanante of listaAcompanante) {
-            let contenedorAcompanante = document.createElement("div");
-            contenedorAcompanante.innerHTML = `<div class="cardServicio">
-                                    <h3>${acompanante.nombre}</h3>
-                                    <p>Horas recomendadas: ${acompanante.cantidadHoras}</p>
-                                    <b> Valor Hora: $ ${acompanante.precio}</b>
-                                    <button>Solicitar</button>
-                                    </div>`
-            contenedorCardsJavaScript.appendChild(contenedorAcompanante);
-            console.log(contenedorAcompanante.innerHTML);
+        contenedorCardsAcompanante = document.querySelector(".contenedorCardsAcompanante");
+        contenedorCardsAcompanante.innerHTML = '';
+        if (checkbox3.checked){
+            for (const acompanante of listaAcompanante) {
+                let contenedorAcompanante = document.createElement("div");
+                contenedorAcompanante.innerHTML = `<div class="cardServicio">
+                                        <h3>${acompanante.nombre}</h3>
+                                        <p>Horas recomendadas: ${acompanante.cantidadHoras}</p>
+                                        <b> Valor Hora: $ ${acompanante.precio}</b>
+                                        <button>Solicitar</button>
+                                        </div>`
+                contenedorCardsAcompanante.appendChild(contenedorAcompanante);
+                console.log(contenedorAcompanante.innerHTML);
+            }
         }
     }
 

@@ -480,7 +480,17 @@ a {
 #boton3 {
   background-color: blue; }
 
-.contenedorCardsJavaScript {
+.contenedorCardsIntegracion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.contenedorCardsTerapias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.contenedorCardsAcompanante {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
