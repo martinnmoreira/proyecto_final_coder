@@ -1,0 +1,127 @@
+.bloqueContenedor {
+    border: 1px solid $color-gris-oscuro;
+    width: auto;
+    height: 300px;
+    margin-bottom: 1rem;
+}
+
+.bloqueContenedor__titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+}
+
+.bloqueContenedor__parrafo {
+    color: blue;
+    font-size: 1.4rem;
+}
+
+.boton {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 0.4rem;
+    margin: 1rem;
+}
+
+.boton--verde {
+    background-color: $color-verde;
+}
+
+.boton--rojo {
+    background-color: red;
+}
+
+.boton--tamano {
+    width: 40rem;
+}
+
+.boton--tamanoDos {
+    width: 60rem;
+}
+
+.bloqueContenedor__lista {
+    list-style: none;
+    margin: 2rem;
+}
+
+.bloqueContenedor__lista--color {
+    color: slateblue;
+}
+
+.noticia__titulo {
+    color: red;
+    text-transform: uppercase;
+}
+
+.noticia__titulo--tamanoUno {
+    font-size: 3rem;
+}
+
+.noticia__titulo--tamanoDos {
+    font-size: 2 rem;
+}
+
+.noticia__titulo--tamanoTres {
+    font-size: 1rem;
+}
+
+.noticia__titulo--colorUno {
+    color: blue;
+}
+
+.noticia__titulo--colorDos {
+    color: fuchsia;
+}
+
+.noticia__titulo--colorTres {
+    color: brown;
+}
+
+.bloqueContenedor__titulo--color {
+    color: coral;
+}
+
+.bloqueContenedor__imagen {
+    background-color: grey;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.bloqueContenedor__imagen--tamano {
+    width: 15rem;
+    height: 10rem;
+}
+
+
+// EJERCICIO SCSS OPERACIONES
+
+// IF
+@if $ancho < 60rem {
+    .boton {
+        background-color: green;
+    }
+}
+
+// FOR
+@for $contador from 1 to 3 {
+    #boton#{$contador}{width: 5rem * $contador;}
+}
+
+// MAPAS
+$botones: ( /*Declaramos nuestro mapa*/
+        1: green,
+        2:  red,
+        3: blue
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $numero, $color in $botones {
+    #boton#{$numero} {
+        background-color: $color;
+    }
+}
+
+.contenedorCardsJavaScript{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
