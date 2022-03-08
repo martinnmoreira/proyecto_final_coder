@@ -125,3 +125,11 @@ $botones: ( /*Declaramos nuestro mapa*/
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.cardServicio{
+    margin: 2px;
+    padding: 5px;
+    width: 300px;
+    border: 1px solid gray;
+    gap: 1px;
+}
