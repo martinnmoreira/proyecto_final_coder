@@ -480,6 +480,11 @@ a {
 #boton3 {
   background-color: blue; }
 
+.contenedorCardsJavaScript {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
 .imagenInclusionPrincipal {
   width: 100%;
   height: 42rem;
