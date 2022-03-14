@@ -483,17 +483,20 @@ a {
 .contenedorCardsIntegracion {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background-color: #fbfbfb; }
 
 .contenedorCardsTerapias {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background-color: #fbfbfb; }
 
-.contenedorCardsAcompanante {
+.contenedorCardsAcompanyante {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background-color: #fbfbfb; }
 
 .cardServicio {
   margin: 2px;

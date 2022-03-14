@@ -8,9 +8,11 @@ let precioPresupuesto;
 let contador = 0;
 let listadoIntegracionMenu = "Estos son los servicios de integracion ofrecidos. Por favor sellecione uno para obtener un presupuesto: ";
 let listadoTerapiasMenu = "Estas son las terapias ofrecidas. Por favor sellecione una para obtener un presupuesto: ";
-let listadoAcompananteMenu = "Estos son los servicios de acompañamiento terapéutico ofrecidos. Por favor sellecione una para obtener un presupuesto: ";
-let resultadoBusqueda = "";
-let contenedorCardsJavaScript;
+let listadoAcompanyanteMenu = "Estos son los servicios de acompañamiento terapéutico ofrecidos. Por favor sellecione una para obtener un presupuesto: ";
+let resultadoBusqueda = '';
+let contenedorIntegracion = '';
+let contenedorTerapias = '';
+let contenedorAcompanyante = '';
 
 //Integración
 
@@ -68,7 +70,7 @@ contador = 0;
 
 //Acompañante terapéutico
 
-function Acompanante (nombreValor, precioHoraValor, cantidadHorasValor){
+function Acompanyante (nombreValor, precioHoraValor, cantidadHorasValor){
 
     this.nombre = nombreValor;
     
@@ -78,27 +80,24 @@ function Acompanante (nombreValor, precioHoraValor, cantidadHorasValor){
     
 }
 
-const listaAcompanante = [];
+const listaAcompanyante = [];
 
-listaAcompanante.push (new Acompanante("Acompañante Terapéutica - Jornada completa", 1000, 160));
-listaAcompanante.push (new Acompanante("Acompañante Terapéutica - Jornada parcial", 1300, 80));
-listaAcompanante.push (new Acompanante("Acompañante Terapéutica - Horario particular", 1500, 1));
+listaAcompanyante.push (new Acompanyante("Acompañante Terapéutica - Jornada completa", 1000, 160));
+listaAcompanyante.push (new Acompanyante("Acompañante Terapéutica - Jornada parcial", 1300, 80));
+listaAcompanyante.push (new Acompanyante("Acompañante Terapéutica - Horario particular", 1500, 1));
 
 
-for(const acompanante of listaAcompanante){
+for(const acompanyante of listaAcompanyante){
     contador++
-    listadoAcompananteMenu += "\n" + contador + "- " + acompanante.nombre;
+    listadoAcompanyanteMenu += "\n" + contador + "- " + acompanyante.nombre;
 }
 contador =0;
 
 
 //DOM
 
-let input1 = document.getElementById("nombre")
-
-input1.addEventListener('change', () => {
- console.log(input1.value)
-})
+const input1  = document.querySelector("#busqueda");
+input1.addEventListener('keyup', buscar);
 
 
 let opcion1 = document.querySelector(".opcion1");
@@ -123,7 +122,7 @@ checkbox1.addEventListener("change", respuestaClick);
                                         <button>Solicitar</button>
                                         </div>`
                 contenedorCardsIntegracion.appendChild(contenedorIntegracion);
-                console.log(contenedorIntegracion.innerHTML);
+                //console.log(contenedorIntegracion.innerHTML);
             }
         }
     }
@@ -136,7 +135,7 @@ checkbox2.addEventListener("click", respuestaClick2);
         contenedorCardsTerapias.innerHTML = '';
         if (checkbox2.checked){
             for (const terapia of listaTerapias) {
-                let contenedorTerapias = document.createElement("div");
+                contenedorTerapias = document.createElement("div");
                 contenedorTerapias.innerHTML = `<div class="cardServicio">
                                         <h3>${terapia.nombre}</h3>
                                         <p>Horas recomendadas: ${terapia.cantidadHoras}</p>
@@ -144,7 +143,7 @@ checkbox2.addEventListener("click", respuestaClick2);
                                         <button>Solicitar</button>
                                         </div>`
                 contenedorCardsTerapias.appendChild(contenedorTerapias);
-                console.log(contenedorTerapias.innerHTML);
+                //console.log(contenedorTerapias.innerHTML);
             }
         }
     }
@@ -152,31 +151,22 @@ checkbox2.addEventListener("click", respuestaClick2);
 let checkbox3 = document.getElementById("check3");
 checkbox3.addEventListener("click", respuestaClick3);
     function respuestaClick3(){
-        contenedorCardsAcompanante = document.querySelector(".contenedorCardsAcompanante");
-        contenedorCardsAcompanante.innerHTML = '';
+        contenedorCardsAcompanyante = document.querySelector(".contenedorCardsAcompanyante");
+        contenedorCardsAcompanyante.innerHTML = '';
         if (checkbox3.checked){
-            for (const acompanante of listaAcompanante) {
-                let contenedorAcompanante = document.createElement("div");
-                contenedorAcompanante.innerHTML = `<div class="cardServicio">
-                                        <h3>${acompanante.nombre}</h3>
-                                        <p>Horas recomendadas: ${acompanante.cantidadHoras}</p>
-                                        <b> Valor Hora: $ ${acompanante.precio}</b>
+            for (const acompanyante of listaAcompanyante) {
+                contenedorAcompanyante = document.createElement("div");
+                contenedorAcompanyante.innerHTML = `<div class="cardServicio">
+                                        <h3>${acompanyante.nombre}</h3>
+                                        <p>Horas recomendadas: ${acompanyante.cantidadHoras}</p>
+                                        <b> Valor Hora: $ ${acompanyante.precio}</b>
                                         <button>Solicitar</button>
                                         </div>`
-                contenedorCardsAcompanante.appendChild(contenedorAcompanante);
-                console.log(contenedorAcompanante.innerHTML);
+                contenedorCardsAcompanyante.appendChild(contenedorAcompanyante);
+                //console.log(contenedorAcompanyante.innerHTML);
             }
         }
     }
-
-
-/* let userName = prompt("Ingrese su nombre");
-
-while(userName == ""){
-    userName = prompt("Ingrese un nombre válido:");
-}
-
-alert("Buenos días " + userName); */
 
 let meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 let f = new Date();
@@ -197,28 +187,59 @@ function presupuesto(){
 }
 
 function buscar(){
-    let busquedaUsuario = prompt("Ingrese su busqueda: ");
-    if (busquedaUsuario == ""){
-        alert("Ingrese una busqueda válida.");
-        buscar();
-    }
-    console.log(busquedaUsuario);
-    const newArrayBuscado = listaIntegracion.filter((x) => x.nombre.includes(busquedaUsuario));
-    for (i = 0; i < newArrayBuscado.length; i++){
-        resultadoBusqueda += "\n" + newArrayBuscado[i].nombre + "\nPrecio de la hora: " + newArrayBuscado[i].precio + "\nHoras recomendadas: " + newArrayBuscado[i].cantidadHoras + "\n--------------------------------\n";
-    }
-    const newArrayBuscado1 = listaTerapias.filter((x) => x.nombre.includes(busquedaUsuario));
-    for (i = 0; i < newArrayBuscado1.length; i++){
-        resultadoBusqueda += "\n" + newArrayBuscado1[i].nombre + "\nPrecio de la hora: " + newArrayBuscado1[i].precio + "\nHoras recomendadas: " + newArrayBuscado1[i].cantidadHoras + "\n--------------------------------\n";
-    }
-    const newArrayBuscado2 = listaAcompanante.filter((x) => x.nombre.includes(busquedaUsuario));
-    for (i = 0; i < newArrayBuscado2.length; i++){
-        resultadoBusqueda += "\n" + newArrayBuscado2[i].nombre + "\nPrecio de la hora: " + newArrayBuscado2[i].precio + "\nHoras recomendadas: " + newArrayBuscado2[i].cantidadHoras + "\n--------------------------------\n";
+    const texto = input1.value.toLowerCase();
+    //BUSCADOR INTEGRACION
+    contenedorCardsIntegracion = document.querySelector(".contenedorCardsIntegracion");
+    contenedorCardsIntegracion.innerHTML = '';
+    for(let integracion of listaIntegracion){
+        let nombre = integracion.nombre.toLowerCase();
+        if(nombre.indexOf(texto) != -1){
+                contenedorIntegracion = document.createElement("div");
+                contenedorIntegracion.innerHTML = `<div class="cardServicio">
+                                        <h3>${integracion.nombre}</h3>
+                                        <p>Horas recomendadas: ${integracion.cantidadHoras}</p>
+                                        <b> Valor Hora: $ ${integracion.precio}</b>
+                                        <button>Solicitar</button>
+                                        </div>`
+                contenedorCardsIntegracion.appendChild(contenedorIntegracion);
+                //console.log(contenedorIntegracion.innerHTML);
+        }
     }
 
-    console.log(resultadoBusqueda)
-    alert("El resultado de su busqueda se muestra a continuación: " + resultadoBusqueda);   
+    //BUSCADOR TERAPIAS
+    contenedorCardsTerapias = document.querySelector(".contenedorCardsTerapias");
+    contenedorCardsTerapias.innerHTML = '';
+    for(let terapia of listaTerapias){
+        let nombre = terapia.nombre.toLowerCase();
+        if(nombre.indexOf(texto) != -1){
+            contenedorTerapias = document.createElement("div");
+            contenedorTerapias.innerHTML = `<div class="cardServicio">
+                                    <h3>${terapia.nombre}</h3>
+                                    <p>Horas recomendadas: ${terapia.cantidadHoras}</p>
+                                    <b> Valor Hora: $ ${terapia.precio}</b>
+                                    <button>Solicitar</button>
+                                    </div>`
+            contenedorCardsTerapias.appendChild(contenedorTerapias);
+            //console.log(contenedorTerapias.innerHTML);
+        }
+    }
+    
+    //BUSCADOR ACOMPAÑANTE TERAPEUTICO
+    contenedorCardsAcompanyante = document.querySelector(".contenedorCardsAcompanyante");
+    contenedorCardsAcompanyante.innerHTML = '';
+    for(let acompanyante of listaAcompanyante){
+        let nombre = acompanyante.nombre.toLowerCase();
+        if(nombre.indexOf(texto) != -1){
+                contenedorAcompanyante = document.createElement("div");
+                contenedorAcompanyante.innerHTML = `<div class="cardServicio">
+                                        <h3>${acompanyante.nombre}</h3>
+                                        <p>Horas recomendadas: ${acompanyante.cantidadHoras}</p>
+                                        <b> Valor Hora: $ ${acompanyante.precio}</b>
+                                        <button>Solicitar</button>
+                                        </div>`
+                contenedorCardsAcompanyante.appendChild(contenedorAcompanyante);
+                //console.log(contenedorAcompanyante.innerHTML);
+        }
+    }
+
 }
-
-
-//menu();

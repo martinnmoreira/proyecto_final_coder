@@ -124,18 +124,21 @@ $botones: ( /*Declaramos nuestro mapa*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: $color-blanco;
 }
 
 .contenedorCardsTerapias{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: $color-blanco;
 }
 
-.contenedorCardsAcompanante{
+.contenedorCardsAcompanyante{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: $color-blanco;
 }
 
 .cardServicio{
