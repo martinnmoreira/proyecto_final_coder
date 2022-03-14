@@ -480,29 +480,17 @@ a {
 #boton3 {
   background-color: blue; }
 
-.contenedorCardsIntegracion {
+.contenedorCardsServicios {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #fbfbfb; }
-
-.contenedorCardsTerapias {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #fbfbfb; }
-
-.contenedorCardsAcompanyante {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #fbfbfb; }
+  flex-wrap: wrap; }
 
 .cardServicio {
   margin: 2px;
   padding: 5px;
   width: 300px;
   border: 1px solid gray;
+  background-color: #fbfbfb;
   gap: 1px; }
 
 .imagenInclusionPrincipal {

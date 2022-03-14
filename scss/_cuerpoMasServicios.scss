@@ -120,31 +120,19 @@ $botones: ( /*Declaramos nuestro mapa*/
     }
 }
 
-.contenedorCardsIntegracion{
+.contenedorCardsServicios{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: $color-blanco;
-}
-
-.contenedorCardsTerapias{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: $color-blanco;
-}
-
-.contenedorCardsAcompanyante{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: $color-blanco;
+    
 }
 
 .cardServicio{
     margin: 2px;
     padding: 5px;
     width: 300px;
+    //height: 120px;
     border: 1px solid gray;
+    background-color: $color-blanco;
     gap: 1px;
 }

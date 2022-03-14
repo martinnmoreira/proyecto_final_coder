@@ -88,31 +88,43 @@
     <!-- Fin del Menú de navegación -->
     <!-- Inicio de Sección central -->
     <h1>Más Servicios</h1>
-    <section>
-    <div><label style="margin-right: 5px;">Ingrese su búsqueda:</label><input id = "busqueda" type="text"></div>
-    
-    <div style="display: flex; flex-direction: row; margin: 10px;padding: 10px;">
-        <div class="form-check"style="margin-right: 20px;">
-            <input class="form-check-input" type="checkbox" value="" id="check1">
-            <label class="form-check-label opcion1" for="flexCheckChecked">
-            </label>
-        </div>
-        <div class="form-check" style="margin-right: 20px;">
-            <input class="form-check-input" type="checkbox" value="" id="check2">
-            <label class="form-check-label opcion2" for="flexCheckChecked">
-            </label>
-        </div>
-        <div class="form-check" style="margin-right: 20px;">
-            <input class="form-check-input" type="checkbox" value="" id="check3">
-            <label class="form-check-label opcion3" for="flexCheckChecked">
-            </label>
+    <div class="container-fluid">
+        <div class="row">
+            <main id="items" class="col-sm-8 row">
+                <div><label style="margin-right: 5px;">Ingrese su búsqueda:</label><input id = "busqueda" type="text"></div>
+                
+                <div style="display: flex; flex-direction: row; margin: 10px;padding: 10px;">
+                    <div class="form-check"style="margin-right: 20px;">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label opcion1" for="flexCheckChecked">
+                        </label>
+                    </div>
+                    <div class="form-check" style="margin-right: 20px;">
+                        <input class="form-check-input" type="checkbox" value="" id="check2">
+                        <label class="form-check-label opcion2" for="flexCheckChecked">
+                        </label>
+                    </div>
+                    <div class="form-check" style="margin-right: 20px;">
+                        <input class="form-check-input" type="checkbox" value="" id="check3">
+                        <label class="form-check-label opcion3" for="flexCheckChecked">
+                        </label>
+                    </div>
+                </div>
+                <div class = "contenedorCardsServicios"></div>
+                <!-- <div class = "contenedorCardsTerapias"></div>
+                <div class = "contenedorCardsAcompanyante"></div> -->
+            </main>
+            <!-- Carrito / Presupuesto -->
+            <aside class="col-sm-4">
+                <h2>Presupuesto</h2>
+                <!-- Elementos a presupuestar -->
+                <ul id="presupuesto" class="list-group"></ul>
+                <hr>
+                <p class="text-right">Presupuesto total: <span id="total"></span></p>
+                <button id="boton-vaciar" class="btn btn-primary boton--verde">Vaciar</button>
+            </aside>
         </div>
     </div>
-
-    <div class = "contenedorCardsIntegracion"></div>
-    <div class = "contenedorCardsTerapias"></div>
-    <div class = "contenedorCardsAcompanyante"></div>
-    </section>
     <!-- Fin de Sección central -->
     <!-- Inicio del footer -->
     <footer class="container-fluid bgGrey clBlanco">
