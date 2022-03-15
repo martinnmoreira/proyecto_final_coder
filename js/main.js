@@ -111,6 +111,18 @@ function renderizarCards(categoria) {
                 miNodoBoton.addEventListener('click', anyadirServicioAlPresupuesto);
                 contenedorCardsServicios.appendChild(contenedorServicio);
                 contenedorCardsServicios.appendChild(miNodoBoton);
+
+                miNodoBoton.disabled = false;
+                
+                if (servicio.cantidadHoras > 1){
+                //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
+                    miNodoBoton.addEventListener('click', bloquearBoton);
+                    console.log("bloquear boton");
+                    function bloquearBoton(){
+                        //miNodoBoton.disabled = true;
+                        miNodoBoton.classList.add('boton--disabled')
+                    }
+                }
             }
         }
 }
