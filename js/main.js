@@ -3,7 +3,7 @@
 let serviceNameA = "Integración";
 let serviceNameB = "Terapias";
 let serviceNameC = "Acompañante terapéutico";
-let iva = 1.21;
+let iva = 0.21;
 let precioPresupuesto;
 let resultadoBusqueda = '';
 let contenedorCardsServicios = '';
@@ -22,7 +22,7 @@ let flagVaciarPresupuesto = false;
 
 //Integración
 
-function Servicio (idValor, nombreValor, precioHoraValor, cantidadHorasValor, categoriaValor){
+function Servicio (idValor, nombreValor, precioHoraValor, cantidadHorasValor, categoriaValor, imagenValor){
 
     this.id = idValor;
 
@@ -33,25 +33,27 @@ function Servicio (idValor, nombreValor, precioHoraValor, cantidadHorasValor, ca
     this.cantidadHoras = cantidadHorasValor;
 
     this.categoria = categoriaValor;
+
+    this.imagen = imagenValor;
     
 }
 
 const listaServicios = [];
 
-listaServicios.push (new Servicio(1, 'Integración - Jornada doble', 1000, 160, "Integración"));
-listaServicios.push (new Servicio(2, 'Integración - Media jornada', 1200, 80, "Integración"));
-listaServicios.push (new Servicio(3, 'Integración - Parcial', 1200, 1, "Integración"));
-listaServicios.push (new Servicio(4, "Terapia ocupacional", 1000, 8, "Terapías"));
-listaServicios.push (new Servicio(5, "Psicología", 1100, 8, "Terapías"));
-listaServicios.push (new Servicio(6, "Psicopedagogía", 900, 8, "Terapías"));
-listaServicios.push (new Servicio(7, "Fonoaudiología", 1000, 8, "Terapías"));
-listaServicios.push (new Servicio(8, "Kinesiología", 800, 8, "Terapías"));
-listaServicios.push (new Servicio(9, "Fisioterapia", 850, 8, "Terapías"));
-listaServicios.push (new Servicio(10, "Equinoterapia", 1400, 8, "Terapías"));
-listaServicios.push (new Servicio(11, "Hidroterapia", 1350, 8, "Terapías"));
-listaServicios.push (new Servicio(12, "Acompañante Terapéutico - Jornada completa", 1000, 160, "Acompañante Terapéutico"));
-listaServicios.push (new Servicio(13, "Acompañante Terapéutico - Jornada parcial", 1300, 80, "Acompañante Terapéutico"));
-listaServicios.push (new Servicio(14, "Acompañante Terapéutico - Horario particular", 1500, 1, "Acompañante Terapéutico"));
+listaServicios.push (new Servicio(1, 'Integración - Jornada doble', 1000, 160, "Integración", "../img/favicon.png"));
+listaServicios.push (new Servicio(2, 'Integración - Media jornada', 1200, 80, "Integración", "../img/favicon.png"));
+listaServicios.push (new Servicio(3, 'Integración - Parcial', 1200, 1, "Integración", "../img/favicon.png"));
+listaServicios.push (new Servicio(4, "Terapia ocupacional", 1000, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(5, "Psicología", 1100, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(6, "Psicopedagogía", 900, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(7, "Fonoaudiología", 1000, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(8, "Kinesiología", 800, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(9, "Fisioterapia", 850, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(10, "Equinoterapia", 1400, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(11, "Hidroterapia", 1350, 8, "Terapías", "../img/favicon.png"));
+listaServicios.push (new Servicio(12, "Acompañante Terapéutico - Jornada completa", 1000, 160, "Acompañante Terapéutico", "../img/favicon.png"));
+listaServicios.push (new Servicio(13, "Acompañante Terapéutico - Jornada parcial", 1300, 80, "Acompañante Terapéutico", "../img/favicon.png"));
+listaServicios.push (new Servicio(14, "Acompañante Terapéutico - Horario particular", 1500, 1, "Acompañante Terapéutico", "../img/favicon.png"));
 
 
 //DOM
@@ -59,7 +61,7 @@ listaServicios.push (new Servicio(14, "Acompañante Terapéutico - Horario parti
 const input1  = document.querySelector("#busqueda");
 input1.value = "";
 input1.addEventListener('keyup', buscar);
-buscar()
+
 
 let opcion1 = document.querySelector(".opcion1");
 opcion1.innerHTML = serviceNameA;
@@ -99,8 +101,8 @@ function renderizarCards(categoria) {
                                         <h3>${servicio.nombre}</h3>
                                         <p>Horas recomendadas: ${servicio.cantidadHoras}</p>
                                         <b> Valor Hora: $ ${servicio.precio}</b>
-                                        
                                         </div>`
+                                        //Línea por si quiero agregar imagen a la card<img src ="${servicio.imagen}"/>
                 const miNodoBoton = document.createElement('button');
                 miNodoBoton.setAttribute("id","boton-solicitar");
                 miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
@@ -112,21 +114,6 @@ function renderizarCards(categoria) {
             }
         }
 }
-
-/* function calculadora(precioPresupuesto, cantidadHorasTerapia){
-    precioTotal = ((precioPresupuesto*cantidadHorasTerapia) + ((precioPresupuesto*cantidadHorasTerapia) * iva / 100));
-    presupuesto();
-}
-
-function presupuesto(){
-    if (cantidadHorasValor != 1){
-        alert("El presupuesto para el servicio se detalla a continuación: \n\nPrecio de la hora del servicio: $" + precioPresupuesto + "\nHoras mensuales recomendadas: " + cantidadHorasValor +"\nIVA: " + iva + "%" + "\n\nPrecio Total del modulo mensual: $" + precioTotal + "\n\nFecha del presupuesto: " + fecha);
-    }
-    else{
-        alert("El presupuesto para el servicio se detalla a continuación: \n\nPrecio de la hora del servicio: $" + precioPresupuesto + "\nIVA: " + iva + "%" + "\n\nPrecio por hora: $" + precioTotal + "\n\nFecha del presupuesto: " + fecha);
-    }
-} */
-
 
 /* BUSCADOR / RENDERIZADOR SERVICIO */
 function buscar(){
@@ -142,8 +129,8 @@ function buscar(){
                                                 <h3>${servicio.nombre}</h3>
                                                 <p>Horas recomendadas: ${servicio.cantidadHoras}</p>
                                                 <b> Valor Hora: $ ${servicio.precio}</b>
-                                                
                                                 </div>`
+                                                //Línea por si quiero agregar imagen a la card<img src ="${servicio.imagen}"/>
                 const miNodoBoton = document.createElement('button');
                 miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
                 miNodoBoton.textContent = 'Solicitar';
@@ -155,12 +142,13 @@ function buscar(){
                 
                 miNodoBoton.disabled = false;
                 
-                if (servicio.cantidadHoras > 8){
+                if (servicio.cantidadHoras > 1){
                 //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
                     miNodoBoton.addEventListener('click', bloquearBoton);
-                    console.log("estoy aca");
+                    console.log("bloquear boton");
                     function bloquearBoton(){
-                        miNodoBoton.disabled = true;
+                        //miNodoBoton.disabled = true;
+                        miNodoBoton.classList.add('boton--disabled')
                     }
                 }
         }
@@ -204,7 +192,7 @@ function renderizarPresupuesto() {
         // Creamos el nodo del item del presupuesto
         const miNodo = document.createElement('li');
         miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+        miNodo.textContent = `${numeroUnidadesItem} Módulo(s) de ${miItem[0].cantidadHoras} hora(s)  x ${miItem[0].nombre} - Valor hora: ${miItem[0].precio}${divisa} + IVA`;
         // Boton de borrar
         const miBoton = document.createElement('button');
         miBoton.classList.add('btn', 'btn-danger', 'boton--verde', 'mx-5');
@@ -226,29 +214,35 @@ function renderizarPresupuesto() {
 function borrarItemPresupuesto(e) {
     // Obtenemos el ID del servicio que hay en el boton pulsado
     const id = e.target.dataset.item;
-    // Borramos todos los servicios
+    // Borramos todo el servicio seleccionado
     presupuesto = presupuesto.filter((servicioId) => {
         return servicioId !== id;
     });
     // volvemos a renderizar
+    //buscar()
     renderizarPresupuesto();
+
     // Actualizamos el LocalStorage
     guardarPresupuestoEnLocalStorage();
 
 }
 
+
+/*Evento para habilitar boton de las cards cuando se borra del presupuesto*/
+
+
 /**
- * Calcula el precio total teniendo en cuenta los productos repetidos
+ * Calcula el precio total teniendo en cuenta los servicios repetidos
  */
 function calcularTotal() {
-    // Recorremos el array del carrito 
+    // Recorremos el array del presupuesto 
     return presupuesto.reduce((total, item) => {
         // De cada elemento obtenemos su precio
         const miItem = listaServicios.filter((itemBaseDatos) => {
             return itemBaseDatos.id === parseInt(item);
         });
         // Los sumamos al total
-        return total + miItem[0].precio;
+        return total + ((miItem[0].precio + miItem[0].precio * iva) * miItem[0].cantidadHoras);
     }, 0).toFixed(2);
 }
 
@@ -283,5 +277,5 @@ DOMbotonVaciar.addEventListener('click', vaciarPresupuesto);
 
 // Inicio
 cargarPresupuestoDeLocalStorage();
-//renderizarServicios();
+buscar()
 renderizarPresupuesto();

@@ -136,3 +136,13 @@ $botones: ( /*Declaramos nuestro mapa*/
     background-color: $color-blanco;
     gap: 1px;
 }
+
+.boton--disabled{
+        cursor: not-allowed;
+        pointer-events: none;
+
+        /*Button disabled - CSS color class*/
+        color: #c0c0c0;
+        background-color: #ffffff;
+
+}
