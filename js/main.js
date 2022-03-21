@@ -80,15 +80,10 @@ checkbox3.addEventListener("change", respuestaClick);
     function respuestaClick(){
         contenedorCardsServicios = document.querySelector(".contenedorCardsServicios");
         contenedorCardsServicios.innerHTML = '';
-        if (checkbox1.checked){
-            renderizarCards("Integración")
-        }
-        if (checkbox2.checked){
-            renderizarCards("Terapías")
-        }
-        if(checkbox3.checked){
-            renderizarCards("Acompañante Terapéutico")
-        }
+        //Operadores avanzados
+        checkbox1.checked && renderizarCards("Integración");
+        checkbox2.checked && renderizarCards("Terapías");
+        checkbox3.checked && renderizarCards("Acompañante Terapéutico");
     }
 
 function renderizarCards(categoria) {
