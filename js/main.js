@@ -163,13 +163,25 @@ function anyadirServicioAlPresupuesto(e) {
     presupuesto.push(e.target.getAttribute('marcador'))
     // Actualizamos el presupuesto
     renderizarPresupuesto();
-    Swal.fire({
+    /* Swal.fire({
         position: 'bottom-end',
         icon: 'success',
         title: 'El servicio se ha agregado al presupuesto!',
         showConfirmButton: false,
         timer: 1500
-        })
+        }) */
+        
+        Toastify({
+        text: "Se agregó el servicio al presupuesto!",
+        duration: 1500,
+        gravity: 'top',
+        position: 'right',
+        style: {
+            background: 
+            'linear-gradient(to right, #00b09b, #63B945)'
+            }
+        }).showToast();
+            
     // Actualizamos el LocalStorage
     guardarPresupuestoEnLocalStorage();
 }
