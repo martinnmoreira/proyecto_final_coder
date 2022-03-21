@@ -411,6 +411,9 @@ a {
 .boton--verde {
   background-color: #63B945; }
 
+.boton--verde:hover {
+  background-color: #FF8800; }
+
 .boton--rojo {
   background-color: red; }
 
