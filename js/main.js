@@ -19,7 +19,6 @@ let checkbox2;
 let checkbox3;
 let flagVaciarPresupuesto = false;
 
-
 //Integración
 
 function Servicio (idValor, nombreValor, precioHoraValor, cantidadHorasValor, categoriaValor, imagenValor){
@@ -54,7 +53,6 @@ listaServicios.push (new Servicio(11, "Hidroterapia", 1350, 8, "Terapías", "../
 listaServicios.push (new Servicio(12, "Acompañante Terapéutico - Jornada completa", 1000, 160, "Acompañante Terapéutico", "../img/favicon.png"));
 listaServicios.push (new Servicio(13, "Acompañante Terapéutico - Jornada parcial", 1300, 80, "Acompañante Terapéutico", "../img/favicon.png"));
 listaServicios.push (new Servicio(14, "Acompañante Terapéutico - Horario particular", 1500, 1, "Acompañante Terapéutico", "../img/favicon.png"));
-
 
 //DOM
 
@@ -111,9 +109,7 @@ function renderizarCards(categoria) {
                 miNodoBoton.addEventListener('click', anyadirServicioAlPresupuesto);
                 contenedorCardsServicios.appendChild(contenedorServicio);
                 contenedorCardsServicios.appendChild(miNodoBoton);
-
-                miNodoBoton.disabled = false;
-                
+                miNodoBoton.disabled = false; 
                 if (servicio.cantidadHoras > 1){
                 //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
                     miNodoBoton.addEventListener('click', bloquearBoton);
@@ -130,7 +126,6 @@ function renderizarCards(categoria) {
 /* BUSCADOR / RENDERIZADOR SERVICIO */
 function buscar(){
     const texto = input1.value.toLowerCase();
-
     contenedorCardsServicios = document.querySelector(".contenedorCardsServicios");
     contenedorCardsServicios.innerHTML = '';
     for(let servicio of listaServicios){
@@ -142,7 +137,7 @@ function buscar(){
                                                 <p>Horas recomendadas: ${servicio.cantidadHoras}</p>
                                                 <b> Valor Hora: $ ${servicio.precio}</b>
                                                 </div>`
-                                                //Línea por si quiero agregar imagen a la card<img src ="${servicio.imagen}"/>
+                                                //Línea por si quiero agregar imagen a la card <img src ="${servicio.imagen}"/>
                 const miNodoBoton = document.createElement('button');
                 miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
                 miNodoBoton.textContent = 'Solicitar';
@@ -151,9 +146,7 @@ function buscar(){
                 miNodoBoton.addEventListener('click', anyadirServicioAlPresupuesto);
                 contenedorCardsServicios.appendChild(contenedorServicio);
                 contenedorCardsServicios.appendChild(miNodoBoton);
-                
                 miNodoBoton.disabled = false;
-                
                 if (servicio.cantidadHoras > 1){
                 //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
                     miNodoBoton.addEventListener('click', bloquearBoton);
@@ -175,6 +168,13 @@ function anyadirServicioAlPresupuesto(e) {
     presupuesto.push(e.target.getAttribute('marcador'))
     // Actualizamos el presupuesto
     renderizarPresupuesto();
+    Swal.fire({
+        position: 'bottom-end',
+        icon: 'success',
+        title: 'El servicio se ha agregado al presupuesto!',
+        showConfirmButton: false,
+        timer: 1500
+        })
     // Actualizamos el LocalStorage
     guardarPresupuestoEnLocalStorage();
 }
@@ -239,9 +239,7 @@ function borrarItemPresupuesto(e) {
 
 }
 
-
 /*Evento para habilitar boton de las cards cuando se borra del presupuesto*/
-
 
 /**
  * Calcula el precio total teniendo en cuenta los servicios repetidos
@@ -285,7 +283,26 @@ function cargarPresupuestoDeLocalStorage () {
 }
 
 // Eventos
-DOMbotonVaciar.addEventListener('click', vaciarPresupuesto);
+
+DOMbotonVaciar.addEventListener('click', () => {
+        
+        Swal.fire({
+            title: '¿Está seguro que desea eliminar el presupuesto?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, seguro',
+            cancelButtonText: 'No, no quiero'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    vaciarPresupuesto(); // esta línea me esta volviendo loco
+                    Swal.fire({
+                        title: 'Borrado!',
+                        icon: 'success',
+                        text: 'El presupuesto ha sido borrado.',
+                        }) 
+                }
+            }) 
+})
 
 // Inicio
 cargarPresupuestoDeLocalStorage();
