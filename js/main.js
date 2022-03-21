@@ -301,7 +301,7 @@ DOMbotonVaciar.addEventListener('click', () => {
             cancelButtonText: 'No, no quiero'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    vaciarPresupuesto(); // esta línea me esta volviendo loco
+                    vaciarPresupuesto();
                     Swal.fire({
                         title: 'Borrado!',
                         icon: 'success',
