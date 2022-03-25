@@ -95,7 +95,6 @@ function renderizarCards(categoria) {
         .then( (data) => {
             data.forEach((servicio) => {
                 listaServicios.push(servicio)
-                console.log(listaServicios)
                 if (servicio.categoria == categoria){
                     const contenedorServicio = document.createElement("div");
                     contenedorServicio.innerHTML = `<div class="cardServicio">
@@ -139,7 +138,6 @@ function buscar(){
         .then( (data) => {
             data.forEach((servicio) => {
                 listaServicios.push(servicio)
-                console.log(listaServicios)
                 let nombre = servicio.nombre.toLowerCase();
                 if(nombre.indexOf(texto) != -1){
                         contenedorServicio = document.createElement("div");
