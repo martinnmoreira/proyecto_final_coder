@@ -39,6 +39,8 @@ function Servicio (idValor, nombreValor, precioHoraValor, cantidadHorasValor, ca
 
 const listaServicios = [];
 
+/*
+
 listaServicios.push (new Servicio(1, 'Integración - Jornada doble', 1000, 160, "Integración", "../img/favicon.png"));
 listaServicios.push (new Servicio(2, 'Integración - Media jornada', 1200, 80, "Integración", "../img/favicon.png"));
 listaServicios.push (new Servicio(3, 'Integración - Parcial', 1200, 1, "Integración", "../img/favicon.png"));
@@ -52,7 +54,7 @@ listaServicios.push (new Servicio(10, "Equinoterapia", 1400, 8, "Terapías", "..
 listaServicios.push (new Servicio(11, "Hidroterapia", 1350, 8, "Terapías", "../img/favicon.png"));
 listaServicios.push (new Servicio(12, "Acompañante Terapéutico - Jornada completa", 1000, 160, "Acompañante Terapéutico", "../img/favicon.png"));
 listaServicios.push (new Servicio(13, "Acompañante Terapéutico - Jornada parcial", 1300, 80, "Acompañante Terapéutico", "../img/favicon.png"));
-listaServicios.push (new Servicio(14, "Acompañante Terapéutico - Horario particular", 1500, 1, "Acompañante Terapéutico", "../img/favicon.png"));
+listaServicios.push (new Servicio(14, "Acompañante Terapéutico - Horario particular", 1500, 1, "Acompañante Terapéutico", "../img/favicon.png")); */
 
 //DOM
 
@@ -87,35 +89,43 @@ checkbox3.addEventListener("change", respuestaClick);
     }
 
 function renderizarCards(categoria) {
-        for (const servicio of listaServicios) {
-            if (servicio.categoria == categoria){
-                const contenedorServicio = document.createElement("div");
-                contenedorServicio.innerHTML = `<div class="cardServicio">
-                                        <h3>${servicio.nombre}</h3>
-                                        <p>Horas recomendadas: ${servicio.cantidadHoras}</p>
-                                        <b> Valor Hora: $ ${servicio.precio}</b>
-                                        </div>`
-                                        //Línea por si quiero agregar imagen a la card<img src ="${servicio.imagen}"/>
-                const miNodoBoton = document.createElement('button');
-                miNodoBoton.setAttribute("id","boton-solicitar");
-                miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
-                miNodoBoton.textContent = 'Solicitar';
-                miNodoBoton.setAttribute('marcador', servicio.id);
-                miNodoBoton.addEventListener('click', anyadirServicioAlPresupuesto);
-                contenedorCardsServicios.appendChild(contenedorServicio);
-                contenedorCardsServicios.appendChild(miNodoBoton);
-                miNodoBoton.disabled = false; 
-                if (servicio.cantidadHoras > 1){
-                //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
-                    miNodoBoton.addEventListener('click', bloquearBoton);
-                    console.log("bloquear boton");
-                    function bloquearBoton(){
-                        //miNodoBoton.disabled = true;
-                        miNodoBoton.classList.add('boton--disabled')
+    //Petición a JSON local para traer la información
+    fetch('../data/data.json')
+        .then( (res) => res.json())
+        .then( (data) => {
+            data.forEach((servicio) => {
+                listaServicios.push(servicio)
+                console.log(listaServicios)
+                if (servicio.categoria == categoria){
+                    const contenedorServicio = document.createElement("div");
+                    contenedorServicio.innerHTML = `<div class="cardServicio">
+                                            <h3>${servicio.nombre}</h3>
+                                            <p>Horas recomendadas: ${servicio.cantidadHoras}</p>
+                                            <b> Valor Hora: $ ${servicio.precio}</b>
+                                            </div>`
+                                            //Línea por si quiero agregar imagen a la card<img src ="${servicio.imagen}"/>
+                    const miNodoBoton = document.createElement('button');
+                    miNodoBoton.setAttribute("id","boton-solicitar");
+                    miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
+                    miNodoBoton.textContent = 'Solicitar';
+                    miNodoBoton.setAttribute('marcador', servicio.id);
+                    miNodoBoton.addEventListener('click', anyadirServicioAlPresupuesto);
+                    contenedorCardsServicios.appendChild(contenedorServicio);
+                    contenedorCardsServicios.appendChild(miNodoBoton);
+                    miNodoBoton.disabled = false; 
+                    if (servicio.cantidadHoras > 1){
+                    //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
+                        miNodoBoton.addEventListener('click', bloquearBoton);
+                        console.log("bloquear boton");
+                        function bloquearBoton(){
+                            //miNodoBoton.disabled = true;
+                            miNodoBoton.classList.add('boton--disabled')
+                        }
                     }
                 }
-            }
-        }
+            })
+        })
+        
 }
 
 /* BUSCADOR / RENDERIZADOR SERVICIO */
@@ -123,36 +133,44 @@ function buscar(){
     const texto = input1.value.toLowerCase();
     contenedorCardsServicios = document.querySelector(".contenedorCardsServicios");
     contenedorCardsServicios.innerHTML = '';
-    for(let servicio of listaServicios){
-        let nombre = servicio.nombre.toLowerCase();
-        if(nombre.indexOf(texto) != -1){
-                contenedorServicio = document.createElement("div");
-                contenedorServicio.innerHTML = `<div class="cardServicio">
-                                                <h3>${servicio.nombre}</h3>
-                                                <p>Horas recomendadas: ${servicio.cantidadHoras}</p>
-                                                <b> Valor Hora: $ ${servicio.precio}</b>
-                                                </div>`
-                                                //Línea por si quiero agregar imagen a la card <img src ="${servicio.imagen}"/>
-                const miNodoBoton = document.createElement('button');
-                miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
-                miNodoBoton.textContent = 'Solicitar';
-                miNodoBoton.setAttribute('marcador', servicio.id);
-                miNodoBoton.setAttribute("id","boton-solicitar");
-                miNodoBoton.addEventListener('click', anyadirServicioAlPresupuesto);
-                contenedorCardsServicios.appendChild(contenedorServicio);
-                contenedorCardsServicios.appendChild(miNodoBoton);
-                miNodoBoton.disabled = false;
-                if (servicio.cantidadHoras > 1){
-                //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
-                    miNodoBoton.addEventListener('click', bloquearBoton);
-                    console.log("bloquear boton");
-                    function bloquearBoton(){
-                        //miNodoBoton.disabled = true;
-                        miNodoBoton.classList.add('boton--disabled')
-                    }
+    //Petición a JSON local para traer la información
+    fetch('../data/data.json')
+        .then( (res) => res.json())
+        .then( (data) => {
+            data.forEach((servicio) => {
+                listaServicios.push(servicio)
+                console.log(listaServicios)
+                let nombre = servicio.nombre.toLowerCase();
+                if(nombre.indexOf(texto) != -1){
+                        contenedorServicio = document.createElement("div");
+                        contenedorServicio.innerHTML = `<div class="cardServicio">
+                                                        <h3>${servicio.nombre}</h3>
+                                                        <p>Horas recomendadas: ${servicio.cantidadHoras}</p>
+                                                        <b> Valor Hora: $ ${servicio.precio}</b>
+                                                        </div>`
+                                                        //Línea por si quiero agregar imagen a la card <img src ="${servicio.imagen}"/>
+                        const miNodoBoton = document.createElement('button');
+                        miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
+                        miNodoBoton.textContent = 'Solicitar';
+                        miNodoBoton.setAttribute('marcador', servicio.id);
+                        miNodoBoton.setAttribute("id","boton-solicitar");
+                        miNodoBoton.addEventListener('click', anyadirServicioAlPresupuesto);
+                        contenedorCardsServicios.appendChild(contenedorServicio);
+                        contenedorCardsServicios.appendChild(miNodoBoton);
+                        miNodoBoton.disabled = false;
+                        if (servicio.cantidadHoras > 1){
+                        //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
+                            miNodoBoton.addEventListener('click', bloquearBoton);
+                            console.log("bloquear boton");
+                            function bloquearBoton(){
+                                //miNodoBoton.disabled = true;
+                                miNodoBoton.classList.add('boton--disabled')
+                            }
+                        }
                 }
-        }
-    }
+            })
+        })
+    //}
 }
 
 /**
@@ -193,7 +211,7 @@ function renderizarPresupuesto() {
     // Vaciamos todo el html
     DOMpresupuesto.textContent = '';
     // Quitamos los duplicados
-    console.log(presupuesto)
+    console.log(presupuesto);
     const presupuestoSinDuplicados = [...new Set(presupuesto)];
     //console.log(presupuestoSinDuplicados)
     // Generamos los Nodos a partir de presupuesto
