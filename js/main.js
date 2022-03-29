@@ -230,8 +230,6 @@ function borrarItemPresupuesto(e) {
 
 }
 
-/*Evento para habilitar boton de las cards cuando se borra del presupuesto*/
-
 /**
  * Calcula el precio total teniendo en cuenta los servicios repetidos
  */
