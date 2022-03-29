@@ -77,7 +77,7 @@ function renderizarCards(categoria) {
         .then( (res) => res.json())
         .then( (data) => {
             data.forEach((servicio) => {
-                listaServicios.push(servicio)
+                listaServicios.push(servicio);
                 if (servicio.categoria == categoria){
                     const contenedorServicio = document.createElement("div");
                     contenedorServicio.innerHTML = `<div class="cardServicio">
@@ -97,15 +97,13 @@ function renderizarCards(categoria) {
                     miNodoBoton.disabled = false; 
                     if (servicio.cantidadHoras > 1){
                         miNodoBoton.addEventListener('click', bloquearBoton);
-                        console.log("bloquear boton");
                         function bloquearBoton(){
                             miNodoBoton.classList.add('boton--disabled')
                         }
                     }
                 }
             })
-        })
-        
+        })  
 }
 
 /* BUSCADOR / RENDERIZADOR SERVICIO */
@@ -118,7 +116,7 @@ function buscar(){
         .then( (res) => res.json())
         .then( (data) => {
             data.forEach((servicio) => {
-                listaServicios.push(servicio)
+                listaServicios.push(servicio);
                 let nombre = servicio.nombre.toLowerCase();
                 if(nombre.indexOf(texto) != -1){
                         contenedorServicio = document.createElement("div");
@@ -139,15 +137,17 @@ function buscar(){
                         miNodoBoton.disabled = false;
                         if (servicio.cantidadHoras > 1){
                             miNodoBoton.addEventListener('click', bloquearBoton);
-                            console.log("bloquear boton");
                             function bloquearBoton(){
-                                miNodoBoton.classList.add('boton--disabled')
+                                miNodoBoton.classList.add('boton--disabled');
                             }
                         }
                 }
-            })
-        })
-    //}
+            });
+        });
+}
+
+function renderizarDOM () {
+    
 }
 
 /**
@@ -155,7 +155,7 @@ function buscar(){
 */
 function anyadirServicioAlPresupuesto(e) {
     // Anyadimos el Nodo a nuestro presupuesto
-    presupuesto.push(e.target.getAttribute('marcador'))
+    presupuesto.push(e.target.getAttribute('marcador'));
     // Actualizamos el presupuesto
     renderizarPresupuesto();    
     Toastify({
@@ -179,7 +179,6 @@ function renderizarPresupuesto() {
     // Vaciamos todo el html
     DOMpresupuesto.textContent = '';
     // Quitamos los duplicados
-    console.log(presupuesto);
     const presupuestoSinDuplicados = [...new Set(presupuesto)];
     // Generamos los Nodos a partir de presupuesto
     presupuestoSinDuplicados.forEach((item) => {
