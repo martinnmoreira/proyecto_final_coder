@@ -39,23 +39,6 @@ function Servicio (idValor, nombreValor, precioHoraValor, cantidadHorasValor, ca
 
 const listaServicios = [];
 
-/*
-
-listaServicios.push (new Servicio(1, 'Integración - Jornada doble', 1000, 160, "Integración", "../img/favicon.png"));
-listaServicios.push (new Servicio(2, 'Integración - Media jornada', 1200, 80, "Integración", "../img/favicon.png"));
-listaServicios.push (new Servicio(3, 'Integración - Parcial', 1200, 1, "Integración", "../img/favicon.png"));
-listaServicios.push (new Servicio(4, "Terapia ocupacional", 1000, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(5, "Psicología", 1100, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(6, "Psicopedagogía", 900, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(7, "Fonoaudiología", 1000, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(8, "Kinesiología", 800, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(9, "Fisioterapia", 850, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(10, "Equinoterapia", 1400, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(11, "Hidroterapia", 1350, 8, "Terapías", "../img/favicon.png"));
-listaServicios.push (new Servicio(12, "Acompañante Terapéutico - Jornada completa", 1000, 160, "Acompañante Terapéutico", "../img/favicon.png"));
-listaServicios.push (new Servicio(13, "Acompañante Terapéutico - Jornada parcial", 1300, 80, "Acompañante Terapéutico", "../img/favicon.png"));
-listaServicios.push (new Servicio(14, "Acompañante Terapéutico - Horario particular", 1500, 1, "Acompañante Terapéutico", "../img/favicon.png")); */
-
 //DOM
 
 const input1  = document.querySelector("#busqueda");
@@ -113,11 +96,9 @@ function renderizarCards(categoria) {
                     contenedorCardsServicios.appendChild(miNodoBoton);
                     miNodoBoton.disabled = false; 
                     if (servicio.cantidadHoras > 1){
-                    //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
                         miNodoBoton.addEventListener('click', bloquearBoton);
                         console.log("bloquear boton");
                         function bloquearBoton(){
-                            //miNodoBoton.disabled = true;
                             miNodoBoton.classList.add('boton--disabled')
                         }
                     }
@@ -157,11 +138,9 @@ function buscar(){
                         contenedorCardsServicios.appendChild(miNodoBoton);
                         miNodoBoton.disabled = false;
                         if (servicio.cantidadHoras > 1){
-                        //if ((servicio.nombre = "Integración - Jornada doble") || (servicio.nombre = "Integración - Media jornada") || (servicio.nombre = "Acompañante Terapéutico - Jornada completa") || (servicio.nombre = "Acompañante Terapéutico - Jornada parcial")){
                             miNodoBoton.addEventListener('click', bloquearBoton);
                             console.log("bloquear boton");
                             function bloquearBoton(){
-                                //miNodoBoton.disabled = true;
                                 miNodoBoton.classList.add('boton--disabled')
                             }
                         }
@@ -178,26 +157,17 @@ function anyadirServicioAlPresupuesto(e) {
     // Anyadimos el Nodo a nuestro presupuesto
     presupuesto.push(e.target.getAttribute('marcador'))
     // Actualizamos el presupuesto
-    renderizarPresupuesto();
-    /* Swal.fire({
-        position: 'bottom-end',
-        icon: 'success',
-        title: 'El servicio se ha agregado al presupuesto!',
-        showConfirmButton: false,
-        timer: 1500
-        }) */
-        
-        Toastify({
-        text: "Se agregó el servicio al presupuesto!",
-        duration: 1500,
-        gravity: 'top',
-        position: 'right',
-        style: {
-            background: 
-            'linear-gradient(to right, #00b09b, #63B945)'
-            }
-        }).showToast();
-            
+    renderizarPresupuesto();    
+    Toastify({
+    text: "Se agregó el servicio al presupuesto!",
+    duration: 1500,
+    gravity: 'top',
+    position: 'right',
+    style: {
+        background: 
+        'linear-gradient(to right, #00b09b, #63B945)'
+        }
+    }).showToast();
     // Actualizamos el LocalStorage
     guardarPresupuestoEnLocalStorage();
 }
@@ -211,7 +181,6 @@ function renderizarPresupuesto() {
     // Quitamos los duplicados
     console.log(presupuesto);
     const presupuestoSinDuplicados = [...new Set(presupuesto)];
-    //console.log(presupuestoSinDuplicados)
     // Generamos los Nodos a partir de presupuesto
     presupuestoSinDuplicados.forEach((item) => {
         // Obtenemos el item que necesitamos de la variable base de datos
@@ -254,7 +223,6 @@ function borrarItemPresupuesto(e) {
         return servicioId !== id;
     });
     // volvemos a renderizar
-    //buscar()
     renderizarPresupuesto();
 
     // Actualizamos el LocalStorage
