@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /*IMPORTS*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
-@import url(../node_modules/toastify-js/src/toastify.css);
-@import url(../node_modules/sweetalert2/dist/sweetalert2.css);
 * {
   text-decoration: none;
   margin: 0px;

@@ -1,7 +1,7 @@
 //PROYECTO FINAL JAVASCRIPT
 
-import Toastify from '../node_modules/toastify-js/src/toastify-es.js';
-import Swal from '../node_modules/sweetalert2/src/sweetalert2.js';
+// import Toastify from '../node_modules/toastify-js/src/toastify-es.js';
+// import Swal from '../node_modules/sweetalert2/src/sweetalert2.js';
 
 let serviceNameA = "Integración";
 let serviceNameB = "Terapias";
