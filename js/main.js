@@ -1,4 +1,7 @@
-// Clase 06 - Entrega
+//PROYECTO FINAL JAVASCRIPT
+
+import Toastify from '../node_modules/toastify-js/src/toastify-es.js';
+import Swal from '../node_modules/sweetalert2/src/sweetalert2.js';
 
 let serviceNameA = "Integración";
 let serviceNameB = "Terapias";
@@ -254,7 +257,6 @@ function vaciarPresupuesto() {
     renderizarPresupuesto();
     // Borra LocalStorage
     localStorage.clear();
-    console.log("Vacie el carrito");
     buscar();
 }
 
@@ -272,24 +274,23 @@ function cargarPresupuestoDeLocalStorage () {
 
 // Eventos
 
-DOMbotonVaciar.addEventListener('click', () => {
-        
-        Swal.fire({
-            title: '¿Está seguro que desea eliminar el presupuesto?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Sí, seguro',
-            cancelButtonText: 'No, no quiero'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    vaciarPresupuesto();
-                    Swal.fire({
-                        title: 'Borrado!',
-                        icon: 'success',
-                        text: 'El presupuesto ha sido borrado.',
-                        }) 
-                }
-            }) 
+DOMbotonVaciar.addEventListener('click', () => {    
+    Swal.fire({
+        title: '¿Está seguro que desea eliminar el presupuesto?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, seguro',
+        cancelButtonText: 'No, no quiero'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                vaciarPresupuesto();
+                Swal.fire({
+                    title: 'Borrado!',
+                    icon: 'success',
+                    text: 'El presupuesto ha sido borrado.',
+                    }) 
+            }
+    }) 
 })
 
 // Inicio
